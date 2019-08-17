@@ -1,0 +1,13 @@
+.first-screen {
+    font-family: 'Alegreya Sans';
+    background-color: $blue-bg;
+    color: white;
+    padding-top: 24px;
+    padding-left: 32px;
+    &__content {
+        display: flex;
+    }
+}
+.img-product {
+    margin-right: -16px;
+}

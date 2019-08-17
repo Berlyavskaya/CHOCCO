@@ -1,0 +1,20 @@
+// colores
+$blue-bg: #61c4d9;
+$grey-bg: #f8faf9;
+$green-bg: #cfdeda;
+$green: #0f5a47;
+$green-btn: #0b4d3c;
+
+// nomalize
+@import "normalize";
+@import "fonts";
+@import "layout";
+
+@import "blocks/section.scss";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/first-screen.scss";
+@import "blocks/advantages.scss";
+@import "blocks/desc.scss";
+@import "blocks/btn.scss";
+@import "blocks/contacts.scss";

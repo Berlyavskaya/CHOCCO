@@ -1,0 +1,20 @@
+.desc {
+    max-width: 404px;
+    margin-bottom: 68px;
+    margin-top: 91px;
+    &_title {
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &__text {
+        max-width: 343px;
+        font-size: 21px;
+        margin-bottom: 28px;
+    }
+}
+.container-desc {
+    max-width: 992px;
+}

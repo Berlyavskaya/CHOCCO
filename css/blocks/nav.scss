@@ -1,0 +1,14 @@
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+.nav__item {
+    margin-right: 25px;
+}
+.nav__item:last-child {
+    margin: 0;
+}

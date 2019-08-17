@@ -1,0 +1,22 @@
+.contacts {
+    padding-right: 33px;
+    padding-left: 26px;
+    position: relative;
+    &__phone {
+        font-family: 'Alegreya Sans';
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.25;
+        text-transform: none;
+    }
+}
+.contacts:before {
+    content: '';
+    position: absolute;
+    background-image: url(/icons/phone.png) ;
+    top: 10px;
+    left: 8px;
+    width: 12px;
+    height: 11px;
+}
