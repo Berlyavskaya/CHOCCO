@@ -1,8 +1,15 @@
 .reasons {
-    padding-top: 8%;
+    background: url(/img/reasons-bg.png) 0% 57%;               
+    background-repeat: no-repeat;
 }
-.reasons__container {
-    align-items: center;
+.reasons:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    background: url(/img/berries-reasons-bg.png) 0% 64%;
+    background-repeat: no-repeat;
 }
 .reasons__subtitle {
     font-size: 18px;
@@ -17,9 +24,9 @@
 .reasons__list {
     display: flex;
     justify-content: space-between;
-    
 }
 .reasons__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,4 +73,24 @@
     font-weight: 300;
     font-style: normal;
     color: #666666;
+}
+.reasons__item:nth-child(2)::before {
+    position: absolute;
+    content: '';
+    width: 67px;
+    height: 21px;
+    top: 18%;
+    left: -22%;
+    background: url(/icons/dots-reasons.svg);
+    background-repeat: no-repeat;
+}
+.reasons__item:nth-child(2)::after {
+    position: absolute;
+    content: '';
+    width: 67px;
+    height: 21px;
+    top: 18%;
+    left: 97%;
+    background: url(/icons/dots-reasons.svg);
+    background-repeat: no-repeat;
 }

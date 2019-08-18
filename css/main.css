@@ -457,11 +457,13 @@ body {
   min-height: 100%; }
 
 .container {
-  width: 975px;
+  width: 940px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
 
 h1,
 h2,
@@ -511,6 +513,11 @@ footer {
   align-items: center;
   width: 100%; }
 
+.logo {
+  width: 53px;
+  height: 38px;
+  max-width: 100%; }
+
 .nav {
   display: flex;
   align-items: center; }
@@ -526,31 +533,39 @@ footer {
   margin: 0; }
 
 .first-screen {
+  position: relative;
   font-family: 'Alegreya Sans';
-  background-color: #61c4d9;
+  background: url(/img/product_bg.png) 85% 50%/48%, url(/img/1scr_bg.png) bottom right/contain, #61c4d9;
+  background-repeat: no-repeat;
   color: white;
-  padding-top: 24px;
-  padding-left: 32px; }
+  padding-top: 24px; }
   .first-screen__content {
     display: flex;
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    align-items: center; }
+
+.first-screen:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 50px;
+  background: url(/img/berries-1scr-bg.png) 41% 100%/76%;
+  background-repeat: no-repeat; }
 
 .img-product {
   margin-right: -16px; }
 
-.container-first-screen {
-  align-items: flex-start; }
-
 .advantages {
   font-family: 'Alegreya Sans';
-  font-size: 16px;
-  margin-right: -43px; }
+  font-size: 16px; }
   .advantages__list {
     display: flex;
-    justify-content: space-between; }
+    margin-bottom: 47px; }
   .advantages__item {
-    width: 128px;
-    padding-left: 51px;
+    width: 125px;
+    padding-left: 49px;
     position: relative;
     margin-right: 49px; }
 
@@ -575,7 +590,7 @@ footer {
   height: 40px; }
 
 .advantages__item:nth-child(2) {
-  padding-left: 71px; }
+  padding-left: 67px; }
 
 .advantages__item:nth-child(3)::before {
   content: "";
@@ -603,9 +618,8 @@ footer {
     margin-bottom: 28px; }
 
 .btn {
-  width: 156px;
-  height: 58px;
-  border-radius: 29px;
+  padding: 17px 34px 17px 34px;
+  border-radius: 40px;
   background-color: white;
   border: none;
   color: #0f5a47;
@@ -615,7 +629,6 @@ footer {
   font-family: inherit; }
 
 .contacts {
-  padding-right: 33px;
   padding-left: 26px;
   position: relative; }
   .contacts__phone {
@@ -635,10 +648,17 @@ footer {
   height: 11px; }
 
 .reasons {
-  padding-top: 8%; }
+  background: url(/img/reasons-bg.png) 0% 57%;
+  background-repeat: no-repeat; }
 
-.reasons__container {
-  align-items: center; }
+.reasons:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 50px;
+  background: url(/img/berries-reasons-bg.png) 0% 64%;
+  background-repeat: no-repeat; }
 
 .reasons__subtitle {
   font-size: 18px;
@@ -655,6 +675,7 @@ footer {
   justify-content: space-between; }
 
 .reasons__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -700,16 +721,40 @@ footer {
   font-style: normal;
   color: #666666; }
 
+.reasons__item:nth-child(2)::before {
+  position: absolute;
+  content: '';
+  width: 67px;
+  height: 21px;
+  top: 18%;
+  left: -22%;
+  background: url(/icons/dots-reasons.svg);
+  background-repeat: no-repeat; }
+
+.reasons__item:nth-child(2)::after {
+  position: absolute;
+  content: '';
+  width: 67px;
+  height: 21px;
+  top: 18%;
+  left: 97%;
+  background: url(/icons/dots-reasons.svg);
+  background-repeat: no-repeat; }
+
 .section-title {
   font-size: 48px;
   font-weight: bold;
   text-transform: uppercase;
   color: #0d0d0d; }
 
-.reviews__list {
+.reviews {
+  background: url(/img/berries-reviews-bg.png) 0% 119%, url(/img/reviews-bg.png) 0% 122%;
+  background-repeat: no-repeat; }
+
+.review__list {
   margin-bottom: 20px; }
 
-.reviews__item {
+.review__item {
   display: flex;
   position: relative;
   box-shadow: -10.6px 7.5px 30px 0 rgba(145, 169, 157, 0.17);
@@ -721,7 +766,7 @@ footer {
   background-repeat: no-repeat;
   background-position: top right; }
 
-.reviews__item::before {
+.review__item::before {
   content: '';
   position: absolute;
   width: 90px;
@@ -731,28 +776,27 @@ footer {
   background-color: white;
   border-radius: 50%; }
 
-.reviews__title {
+.section-title--reviews {
   margin-bottom: 28px; }
 
-.reviews__desc {
+.review__desc {
   padding-top: 11px; }
 
-.reviews__avatar {
-  margin-right: 20px; }
+.review__avatar {
+  margin-right: 20px;
+  max-width: 100%;
+  object-fit: none;
+  width: 253px;
+  height: 259px; }
 
-.reviews-container {
-  margin-top: 56px;
-  padding-left: 17px;
-  padding-right: 17px; }
-
-.reviews__subtitle {
+.review__subtitle {
   font-size: 30px;
   font-weight: 500;
   font-style: normal;
   color: #323232;
   margin-bottom: 21px; }
 
-.reviews__text {
+.review__text {
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
@@ -760,53 +804,53 @@ footer {
   margin-bottom: 28px;
   width: 80%; }
 
-.reviews__username {
+.review__username {
   font-size: 18px;
   font-weight: 500;
   font-style: normal;
   color: #666666; }
 
-.reviews__avatar {
-  object-fit: none; }
-
-.reviews__item:nth-child(1) .reviews__avatar {
+.review__item:nth-child(1) .review__avatar {
   object-position: -8px -51px; }
 
-.reviews__item:nth-child(2) .reviews__avatar {
+.review__item:nth-child(2) .review__avatar {
   object-position: -300px -140px; }
 
-.reviews__item:nth-child(3) .reviews__avatar {
+.review__item:nth-child(3) .review__avatar {
   object-position: -204px -15px; }
 
-.reviews__item:nth-child(2),
-.reviews__item:nth-child(3) {
+.review__item:nth-child(2),
+.review__item:nth-child(3) {
   display: none; }
 
-.reviews__carrousel {
+.review__carrousel {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 28px; }
 
-.reviews__carrousel-item {
+.review__carrousel-item {
   margin-right: 12px;
   width: 67px;
   height: 67px;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  display: flex; }
 
-.reviews__avatar__mini {
+.review__avatar--mini {
+  width: 67px;
+  height: 67px;
   border-radius: 50%;
   object-fit: none; }
 
-.reviews__carrousel-item__current {
+.review__carrousel-item--current {
   border-radius: 50%;
   border: solid 6px #0f5a47;
   margin-right: 6px; }
 
-.reviews__carrousel-item:nth-child(2) .reviews__avatar__mini {
+.review__carrousel-item:nth-child(2) .review__avatar--mini {
   object-position: -105px -41px; }
 
-.reviews__carrousel-item:nth-child(3) .reviews__avatar__mini {
+.review__carrousel-item:nth-child(3) .review__avatar--mini {
   object-position: -83px -11px; }
 
 /*# sourceMappingURL=main.css.map */
