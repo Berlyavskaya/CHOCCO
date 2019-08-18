@@ -1,14 +1,16 @@
 .advantages {
     font-family: 'Alegreya Sans';
     font-size: 16px;
+    margin-right: -43px;
     &__list {
         display: flex;
         justify-content: space-between;
     }
     &__item {
-        max-width: 138px;
+        width: 128px;
         padding-left: 51px;
         position: relative;
+        margin-right: 49px;
     }
     
 }

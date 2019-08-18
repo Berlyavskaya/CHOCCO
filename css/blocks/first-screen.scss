@@ -6,8 +6,12 @@
     padding-left: 32px;
     &__content {
         display: flex;
+        width: 100%;
     }
 }
 .img-product {
     margin-right: -16px;
+}
+.container-first-screen {
+    align-items: flex-start;
 }

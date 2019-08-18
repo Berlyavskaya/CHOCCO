@@ -1,0 +1,69 @@
+.reasons {
+    padding-top: 8%;
+}
+.reasons__container {
+    align-items: center;
+}
+.reasons__subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;    
+    color: #666666;
+    width: 45%;
+    margin-top: 6px;
+    margin-bottom: 55px;
+}
+.reasons__list {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.reasons__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+.reasons__pic {
+    position: relative;
+    background-color: #f2f5f4;
+    border-radius: 50%;
+    border: 25px solid  #f2f5f4;
+    box-sizing: content-box;  
+    width: 75px;
+    height: 70px;  
+    margin-bottom: 35px;
+}
+.reasons__pic::before {
+    content: '';
+    position: absolute;
+    background-image: url(/icons/reasons_sprites.png);
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 70px;  
+    background-position: -6px -11px;
+} 
+    
+
+.reasons__item:nth-child(2) .reasons__pic::before {
+    background-position: -94px -9px;
+}
+.reasons__item:nth-child(3) .reasons__pic::before {
+    background-position: -185px -9px;
+}
+.reasons__title {
+    font-size: 27px;
+    font-weight: bold;
+    font-style: normal;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.reasons__desc {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    color: #666666;
+}
