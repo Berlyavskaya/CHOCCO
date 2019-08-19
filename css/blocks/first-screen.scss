@@ -1,11 +1,13 @@
 .first-screen {
     position: relative;
+    z-index: 1;
     font-family: 'Alegreya Sans';
     background: url(/img/product_bg.png) 85% 50%/48%, 
                 url(/img/1scr_bg.png) bottom right / contain, $blue-bg;
     background-repeat: no-repeat;
     color: white;
     padding-top: 24px;
+    padding-bottom: 47px;
     &__content {
         display: flex;
         width: 100%;
