@@ -651,6 +651,7 @@ footer {
   height: 11px; }
 
 .reasons {
+  position: relative;
   background: url(/img/reasons-bg.png) 0% 57%;
   background-repeat: no-repeat; }
 
@@ -659,7 +660,9 @@ footer {
   content: '';
   width: 100%;
   height: 100%;
-  background: url(/img/berries-reasons-bg.png) 0% 64%;
+  top: 10%;
+  left: 0;
+  background: url(/img/berries-reasons-bg.png) 0% 99%;
   background-repeat: no-repeat; }
 
 .reasons__subtitle {
@@ -750,7 +753,18 @@ footer {
   color: #0d0d0d; }
 
 .reviews {
-  background: url(/img/berries-reviews-bg.png) 0% 119%, url(/img/reviews-bg.png) 0% 122%;
+  position: relative;
+  background: url(/img/berrie-reviews-bg.png) 92% 0%, url(/img/reviews-bg.png) 0% 122%;
+  background-repeat: no-repeat; }
+
+.reviews:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 10%;
+  left: 0;
+  background: url(/img/berries-reviews-bg.png) 0% 93%;
   background-repeat: no-repeat; }
 
 .review__list {
@@ -782,15 +796,17 @@ footer {
   margin-bottom: 28px; }
 
 .review__desc {
-  padding-top: 11px; }
+  padding-top: 11px;
+  max-width: 620px; }
 
 .review__box-avatar {
-  width: 253px;
+  max-width: 253px;
   height: 259px;
-  margin-right: 20px; }
+  margin-right: 20px;
+  overflow: hidden; }
 
 .review__avatar {
-  max-width: 100%;
+  min-width: 100%;
   object-fit: none; }
 
 .review__subtitle {
