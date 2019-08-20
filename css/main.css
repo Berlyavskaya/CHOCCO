@@ -784,12 +784,14 @@ footer {
 .review__desc {
   padding-top: 11px; }
 
-.review__avatar {
-  margin-right: 20px;
-  max-width: 100%;
-  object-fit: none;
+.review__box-avatar {
   width: 253px;
-  height: 259px; }
+  height: 259px;
+  margin-right: 20px; }
+
+.review__avatar {
+  max-width: 100%;
+  object-fit: none; }
 
 .review__subtitle {
   font-size: 30px;
