@@ -1,0 +1,151 @@
+.order {
+    background: url(/img/pattern-order.png) center center no-repeat, #cfdeda;
+    color: #0f5a47;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.67;
+}
+.form {
+    
+    width: 100%;
+}
+.form__elem {
+    display: flex; 
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+.form__col {
+    width: 48%;
+}
+.form__row {    
+    display: flex;
+    flex-wrap: nowrap;
+    &--radio {
+        margin-bottom: 14px;
+    }
+    &--checkbox {
+        margin-bottom: 50px;
+    }
+    &--textarea {
+        margin-bottom: 29px;
+    }
+}
+.form__block {
+    // flex: 1;
+    position: relative;
+    display: block;
+    margin-right: 20px;
+    width: 100%;
+    &:last-child {
+        margin-right: 0;
+    }
+    &--radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+    }
+}
+.form__input {
+    border: none;
+    background: #ffffff;
+    padding: 19px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: OpenSans;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    color: #000000;
+    &--textarea {
+        resize: none;
+        height: 153px;        
+    }
+}
+.form__block-title--radio {
+ margin-right: 20px;
+}
+// Перенесем стандартное отображение элементов за область видимости и добавим отступы к соседствующим меткам
+.form__checkbox:checked,
+.form__checkbox:not(:checked),
+.form__radio:checked,
+.form__radio:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.form__checkbox:checked + label,
+.form__checkbox:not(:checked) + label,
+.form__radio:checked + label,
+.form__radio:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    line-height: 20px;
+    cursor: pointer;
+}
+// Перед метками добавим стилизованные контейнеры для наших пользовательских элементов
+.form__checkbox:checked + label:before,
+.form__checkbox:not(:checked) + label:before,
+.form__radio:checked + label:before,
+.form__radio:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -6px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+.form__radio:checked + label:before,
+.form__radio:not(:checked) + label:before {
+    border-radius: 100%;
+}
+// Добавим индикаторы выбора
+.form__checkbox:checked + label:after,
+.form__checkbox:not(:checked) + label:after,
+.form__radio:checked + label:after,
+.form__radio:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+} 
+.form__checkbox:checked + label:after,
+.form__checkbox:not(:checked) + label:after {
+    left: 7px;
+    top: 2px;
+    width: 9px;
+    height: 4px;
+    border-radius: 1px;
+    border-left: 4px solid  $green;
+    border-bottom: 4px solid  $green;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.form__radio:checked + label:after,
+.form__radio:not(:checked) + label:after {
+    left: 7px;
+    top: 1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: $green;
+}
+// Скроем индикаторы выбора, когда элемент не выбран
+.form__checkbox:not(:checked) + label:after,
+.form__radio:not(:checked) + label:after {
+    opacity: 0;
+}
+.form__checkbox:checked + label:after,
+.form__radio:checked + label:after {
+    opacity: 1;
+}

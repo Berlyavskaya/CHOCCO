@@ -10,6 +10,8 @@ $green-btn: #0b4d3c;
 @import "fonts";
 @import "layout";
 
+@import "media.scss";
+
 @import "blocks/section.scss";
 @import "blocks/header.scss";
 @import "blocks/nav.scss";
@@ -21,4 +23,9 @@ $green-btn: #0b4d3c;
 @import "blocks/reasons.scss";
 @import "blocks/section-title.scss";
 @import "blocks/reviews.scss";
+@import "blocks/order.scss";
+@import "blocks/fixed-menu.scss";
+@import "blocks/vertical-accord.scss";
+
+
 

@@ -9,3 +9,22 @@
     text-transform: uppercase;
     font-family: inherit;
 }
+.btn--submit {
+    background-color: $green-btn;
+    color: #ffffff;
+}
+.btn--reset {
+    background: transparent;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    color: $green;
+    margin-left: 20px;
+    padding: 10px 10px;
+}
+.btn--reset:hover {
+    background-color: #ffffff;
+    border:  solid $green-btn;
+    align-self: center;
+}

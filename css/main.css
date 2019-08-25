@@ -449,6 +449,9 @@ body {
   position: relative;
   color: #666666; }
 
+html {
+  font-size: 16px; }
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -631,6 +634,25 @@ footer {
   text-transform: uppercase;
   font-family: inherit; }
 
+.btn--submit {
+  background-color: #0b4d3c;
+  color: #ffffff; }
+
+.btn--reset {
+  background: transparent;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  color: #0f5a47;
+  margin-left: 20px;
+  padding: 10px 10px; }
+
+.btn--reset:hover {
+  background-color: #ffffff;
+  border: solid #0b4d3c;
+  align-self: center; }
+
 .contacts {
   padding-left: 26px;
   position: relative; }
@@ -751,6 +773,11 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   color: #0d0d0d; }
+  .section-title--white {
+    position: absolute;
+    color: white;
+    top: 99px;
+    left: 79px; }
 
 .reviews {
   position: relative;
@@ -762,10 +789,11 @@ footer {
   content: '';
   width: 100%;
   height: 100%;
-  top: 10%;
+  top: 9%;
   left: 0;
-  background: url(/img/berries-reviews-bg.png) 0% 93%;
-  background-repeat: no-repeat; }
+  background: url(/img/berries-reviews-bg.png) 0% 100%;
+  background-repeat: no-repeat;
+  z-index: 2; }
 
 .review__list {
   margin-bottom: 20px; }
@@ -872,5 +900,219 @@ footer {
 
 .review__carrousel-item:nth-child(3) .review__avatar--mini {
   object-position: -83px -11px; }
+
+.order {
+  background: url(/img/pattern-order.png) center center no-repeat, #cfdeda;
+  color: #0f5a47;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.67; }
+
+.form {
+  width: 100%; }
+
+.form__elem {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.form__col {
+  width: 48%; }
+
+.form__row {
+  display: flex;
+  flex-wrap: nowrap; }
+  .form__row--radio {
+    margin-bottom: 14px; }
+  .form__row--checkbox {
+    margin-bottom: 50px; }
+  .form__row--textarea {
+    margin-bottom: 29px; }
+
+.form__block {
+  position: relative;
+  display: block;
+  margin-right: 20px;
+  width: 100%; }
+  .form__block:last-child {
+    margin-right: 0; }
+  .form__block--radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer; }
+
+.form__input {
+  border: none;
+  background: #ffffff;
+  padding: 19px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: OpenSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000; }
+  .form__input--textarea {
+    resize: none;
+    height: 153px; }
+
+.form__block-title--radio {
+  margin-right: 20px; }
+
+.form__checkbox:checked,
+.form__checkbox:not(:checked),
+.form__radio:checked,
+.form__radio:not(:checked) {
+  position: absolute;
+  left: -9999px; }
+
+.form__checkbox:checked + label,
+.form__checkbox:not(:checked) + label,
+.form__radio:checked + label,
+.form__radio:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 40px;
+  line-height: 20px;
+  cursor: pointer; }
+
+.form__checkbox:checked + label:before,
+.form__checkbox:not(:checked) + label:before,
+.form__radio:checked + label:before,
+.form__radio:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -6px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff; }
+
+.form__radio:checked + label:before,
+.form__radio:not(:checked) + label:before {
+  border-radius: 100%; }
+
+.form__checkbox:checked + label:after,
+.form__checkbox:not(:checked) + label:after,
+.form__radio:checked + label:after,
+.form__radio:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.form__checkbox:checked + label:after,
+.form__checkbox:not(:checked) + label:after {
+  left: 7px;
+  top: 2px;
+  width: 9px;
+  height: 4px;
+  border-radius: 1px;
+  border-left: 4px solid #0f5a47;
+  border-bottom: 4px solid #0f5a47;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.form__radio:checked + label:after,
+.form__radio:not(:checked) + label:after {
+  left: 7px;
+  top: 1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: #0f5a47; }
+
+.form__checkbox:not(:checked) + label:after,
+.form__radio:not(:checked) + label:after {
+  opacity: 0; }
+
+.form__checkbox:checked + label:after,
+.form__radio:checked + label:after {
+  opacity: 1; }
+
+.fixed-menu {
+  position: fixed;
+  top: 211px;
+  right: 46px;
+  z-index: 2; }
+
+.fixed-menu__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-bottom: 3px;
+  position: relative; }
+  .fixed-menu__dot:last-child {
+    margin-bottom: 0; }
+  .fixed-menu__dot::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff; }
+
+.fixed-menu__item--active .fixed-menu__dot {
+  border-color: #fff; }
+
+.menu-accord {
+  background: url(/img/menu-accorg-bg.png) center center no-repeat black;
+  background-size: cover;
+  position: relative; }
+
+.vertical-accord {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+  .vertical-accord__list, .vertical-accord__item, .vertical-accord__trigger, .vertical-accord__content {
+    display: flex;
+    height: 100%; }
+  .vertical-accord__item--active .vertical-accord__wrap-content {
+    width: 100%;
+    max-width: 430px; }
+  .vertical-accord__trigger {
+    width: 100px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    padding-bottom: 20px; }
+  .vertical-accord__title {
+    position: relative;
+    font-size: 48px;
+    font-weight: 500;
+    color: #ffffff;
+    z-index: 1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); }
+  .vertical-accord__wrap-content {
+    overflow: hidden;
+    transition: 0.5s;
+    width: 0; }
+  .vertical-accord__content {
+    padding: 50px 27px 50px 27px;
+    min-width: 430px;
+    background-color: rgba(47, 50, 52, 0.93);
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */

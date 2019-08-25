@@ -10,10 +10,11 @@
     content: '';
     width: 100%;
     height: 100%;
-    top: 10%;
+    top: 9%;
     left: 0;
-    background: url(/img/berries-reviews-bg.png) 0% 93%;
+    background: url(/img/berries-reviews-bg.png) 0% 100%;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 .review__list {
     margin-bottom: 20px;

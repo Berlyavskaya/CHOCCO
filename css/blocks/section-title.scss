@@ -3,4 +3,10 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #0d0d0d;
+    &--white {
+        position: absolute;
+        color: white;
+        top: 99px;
+        left: 79px;
+    }
 }

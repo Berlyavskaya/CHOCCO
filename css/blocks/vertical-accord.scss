@@ -1,0 +1,57 @@
+.menu-accord {
+    background: url(/img/menu-accorg-bg.png) center center no-repeat black;
+    background-size: cover;
+    position: relative;
+}
+.vertical-accord {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &__list, &__item, &__trigger, &__content {
+        display: flex;
+        height:100%;
+    }
+    &__item {
+        &--active {
+            .vertical-accord__wrap-content {
+                width: 100%;
+                max-width: 430px;
+            }
+        }
+    }
+    &__trigger {
+        width: 100px;
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    &__title {
+        position: relative;
+        font-size: 48px;
+        font-weight: 500;
+        color: #ffffff;
+        z-index: 1;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+    &__wrap-content {        
+        overflow: hidden;
+        transition: 0.5s; 
+        width: 0;
+    }
+    &__content {
+        padding: 50px 27px 50px 27px ;
+        min-width: 430px;
+        background-color: rgba(#2f3234, 0.93);
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.5;
+        color: #ffffff
+    }
+    
+}

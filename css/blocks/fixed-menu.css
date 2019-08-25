@@ -1,0 +1,31 @@
+.fixed-menu {
+  position: fixed;
+  top: 211px;
+  right: 46px;
+  z-index: 2; }
+
+.fixed-menu__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-bottom: 3px;
+  position: relative; }
+  .fixed-menu__dot:last-child {
+    margin-bottom: 0; }
+  .fixed-menu__dot::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff; }
+
+.fixed-menu__item--active .fixed-menu__dot {
+  border-color: #fff; }
+
+/*# sourceMappingURL=fixed-menu.css.map */
