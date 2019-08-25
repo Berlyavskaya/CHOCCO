@@ -1,11 +1,11 @@
 .btn {
-    padding: 17px 34px 17px 34px;
-    border-radius: 40px;
+    padding: rem(17px) rem(34px) rem(17px) rem(34px);
+    border-radius: rem(40px);
     background-color: white;
     border: none;
     color: $green;
     font-weight: 800;
-    font-size: 19px;
+    font-size: rem(19px);
     text-transform: uppercase;
     font-family: inherit;
 }
@@ -15,13 +15,13 @@
 }
 .btn--reset {
     background: transparent;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: normal;
     font-style: normal;
     text-transform: none;
     color: $green;
-    margin-left: 20px;
-    padding: 10px 10px;
+    margin-left: rem(20px);
+    padding: rem(10px) rem(10px);
 }
 .btn--reset:hover {
     background-color: #ffffff;

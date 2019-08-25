@@ -1,46 +1,49 @@
 .advantages {
     font-family: 'Alegreya Sans';
-    font-size: 16px;
+    font-size: rem(16px);
     &__list {
         display: flex;
     }
     &__item {
-        width: 125px;
-        padding-left: 49px;
+        width: rem(125px);
+        padding-left: rem(49px);
         position: relative;
-        margin-right: 49px;
+        margin-right: rem(49px);
     }    
+    &__item:last-child {
+        margin-right: 0;
+    }
 }
 .advantages__item:nth-child(1)::before {
     content: "";
     position: absolute;
     background-image: url(/icons/advantages-sprites.png);
-    background-position: -78px -12px;
+    background-position: rem(-78px) rem(-12px);
     top: 0;
     left: 0;
-    width: 44px;
-    height: 41px;
+    width: rem(44px);
+    height: rem(41px);
 }
 .advantages__item:nth-child(2)::before {
     content: "";
     position: absolute;
     background-image: url(/icons/advantages-sprites.png);
-    background-position: -146px -12px;
+    background-position: rem(-146px) rem(-12px);
     top: 0;
-    left: 0px;
-    width: 50px;
-    height: 40px;
+    left: rem(0px);
+    width: rem(50px);
+    height: rem(40px);
 }
 .advantages__item:nth-child(2) {
-    padding-left: 67px;
+    padding-left: rem(67px);
 }
 .advantages__item:nth-child(3)::before {
     content: "";
     position: absolute;
     background-image: url(/icons/advantages-sprites.png);
-    background-position: -220px -12px;
+    background-position: rem(-220px) rem(-12px);
     top: 0;
     left: 0;
-    width: 42px;
-    height: 42px;
+    width: rem(42px);
+    height: rem(42px);
 }

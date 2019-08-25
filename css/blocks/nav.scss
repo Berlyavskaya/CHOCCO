@@ -1,13 +1,17 @@
 .nav {
     display: flex;
     align-items: center;
+
+    @include tablets {
+        display: none;
+    }
 }
 .nav__list {
     display: flex;
     justify-content: space-between;
 }
 .nav__item {
-    margin-right: 25px;
+    margin-right: rem(25px);
 }
 .nav__item:last-child {
     margin: 0;

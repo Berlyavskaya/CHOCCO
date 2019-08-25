@@ -1,12 +1,15 @@
 .section-title {
-    font-size: 48px;
+    font-size: rem(48px);
     font-weight: bold;
     text-transform: uppercase;
     color: #0d0d0d;
     &--white {
         position: absolute;
         color: white;
-        top: 99px;
-        left: 79px;
+        top: rem(99px);
+        left: rem(79px);
     }
+}
+.section-title--order {
+    color: $green;
 }

@@ -1,16 +1,16 @@
 .fixed-menu {
     position: fixed;
-    top: 211px;
-    right: 46px;
+    top: rem(211px);
+    right: rem(46px);
     z-index: 2;
 }
 .fixed-menu__dot {
-    width: 16px;
-    height: 16px;
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid transparent;
-    margin-bottom: 3px;
+    margin-bottom: rem(3px);
     position: relative;
     &:last-child{
         margin-bottom: 0;
@@ -21,8 +21,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 6px;
-        height: 6px;
+        width: rem(6px);
+        height: rem(6px);
         border-radius: 50%;
         background-color: #fff;
     }

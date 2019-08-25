@@ -1,8 +1,11 @@
 .contacts {
-    padding-left: 26px;
+    padding-left: rem(26px);
     position: relative;
+    @include tablets {
+        display: none;
+    }
     &__phone {
-        font-size: 24px;
+        font-size: rem(24px);
         font-weight: normal;
         font-style: normal;
         line-height: 1.25;
@@ -13,8 +16,8 @@
     content: '';
     position: absolute;
     background-image: url(/icons/phone.png) ;
-    top: 10px;
-    left: 8px;
-    width: 12px;
-    height: 11px;
+    top: rem(10px);
+    left: rem(8px);
+    width: rem(12px);
+    height: rem(11px);
 }

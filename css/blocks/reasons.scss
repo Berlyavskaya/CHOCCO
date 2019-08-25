@@ -14,18 +14,23 @@
     background-repeat: no-repeat;
 }
 .reasons__subtitle {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: normal;
     font-style: normal;
     text-align: center;    
     color: #666666;
     width: 45%;
-    margin-top: 6px;
-    margin-bottom: 55px;
+    margin-top: rem(6px);
+    margin-bottom: rem(55px);
 }
 .reasons__list {
     display: flex;
     justify-content: space-between;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .reasons__item {
     position: relative;
@@ -33,6 +38,10 @@
     flex-direction: column;
     align-items: center;
     width: 30%;
+
+    @include tablets {
+        width: 60%;
+    }
 }
 .reasons__pic {
     position: relative;
@@ -40,38 +49,39 @@
     border-radius: 50%;
     border: 25px solid  #f2f5f4;
     box-sizing: content-box;  
-    width: 75px;
-    height: 70px;  
-    margin-bottom: 35px;
+    width: rem(75px);
+    height: rem(70px);  
+    margin-bottom: rem(35px);
 }
 .reasons__pic::before {
     content: '';
     position: absolute;
     background-image: url(/icons/reasons_sprites.png);
-    top: 0;
-    left: 0;
-    width: 75px;
-    height: 70px;  
-    background-position: -6px -11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(75px);
+    height: rem(70px);  
+    background-position: rem(-6px) rem(-11px);
 } 
     
 
 .reasons__item:nth-child(2) .reasons__pic::before {
-    background-position: -94px -9px;
+    background-position: rem(-94.5px) rem(-10.5px);
 }
 .reasons__item:nth-child(3) .reasons__pic::before {
-    background-position: -185px -9px;
+    background-position: rem(-185px) rem(-9px);
 }
 .reasons__title {
-    font-size: 27px;
+    font-size: rem(27px);
     font-weight: bold;
     font-style: normal;
     color: #000000;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
 }
 .reasons__desc {
     text-align: center;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 300;
     font-style: normal;
     color: #666666;
@@ -79,20 +89,27 @@
 .reasons__item:nth-child(2)::before {
     position: absolute;
     content: '';
-    width: 67px;
-    height: 21px;
+    width: rem(67px);
+    height: rem(21px);
     top: 18%;
     left: -22%;
     background: url(/icons/dots-reasons.svg);
     background-repeat: no-repeat;
+    
+    @include tablets {
+        display: none;
+    }
 }
 .reasons__item:nth-child(2)::after {
     position: absolute;
     content: '';
-    width: 67px;
-    height: 21px;
+    width: rem(67px);
+    height: rem(21px);
     top: 18%;
     left: 97%;
     background: url(/icons/dots-reasons.svg);
     background-repeat: no-repeat;
+    @include tablets {
+        display: none;
+    }
 }

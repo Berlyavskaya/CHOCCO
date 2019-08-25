@@ -1,7 +1,7 @@
 .order {
     background: url(/img/pattern-order.png) center center no-repeat, #cfdeda;
     color: #0f5a47;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: normal;
     font-style: normal;
     line-height: 1.67;
@@ -14,7 +14,11 @@
     display: flex; 
     justify-content: center;
     justify-content: space-between;
-    flex-wrap: wrap;   
+    flex-wrap: wrap; 
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }  
 }
 .form__col {
     width: 48%;
@@ -23,20 +27,32 @@
     display: flex;
     flex-wrap: nowrap;
     &--radio {
-        margin-bottom: 14px;
+        margin-bottom: rem(14px);
+        @include tablets {
+            justify-content: center;
+            margin-bottom: rem(28px)
+        }
     }
     &--checkbox {
-        margin-bottom: 50px;
+        margin-bottom: rem(50px);
+        @include tablets {
+            justify-content: center;
+        }
+    }
+    &--btn {
+        @include tablets {
+            justify-content: center;
+        } 
     }
     &--textarea {
-        margin-bottom: 29px;
+        margin-bottom: rem(29px);
     }
 }
 .form__block {
     // flex: 1;
     position: relative;
     display: block;
-    margin-right: 20px;
+    margin-right: rem(20px);
     width: 100%;
     &:last-child {
         margin-right: 0;
@@ -44,29 +60,29 @@
     &--radio {
     display: inline-block;
     position: relative;
-    padding-left: 28px;
-    line-height: 20px;
+    padding-left: rem(28px);
+    line-height: rem(20px);
     cursor: pointer;
     }
 }
 .form__input {
     border: none;
     background: #ffffff;
-    padding: 19px 10px;
+    padding: rem(19px) rem(10px);
     width: 100%;
     box-sizing: border-box;
     font-family: OpenSans;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: normal;
     font-style: normal;
     color: #000000;
     &--textarea {
         resize: none;
-        height: 153px;        
+        height: rem(153px);        
     }
 }
 .form__block-title--radio {
- margin-right: 20px;
+ margin-right: rem(20px);
 }
 // Перенесем стандартное отображение элементов за область видимости и добавим отступы к соседствующим меткам
 .form__checkbox:checked,
@@ -74,7 +90,7 @@
 .form__radio:checked,
 .form__radio:not(:checked) {
     position: absolute;
-    left: -9999px;
+    left: rem(-9999px);
 }
 .form__checkbox:checked + label,
 .form__checkbox:not(:checked) + label,
@@ -82,8 +98,8 @@
 .form__radio:not(:checked) + label {
     display: inline-block;
     position: relative;
-    padding-left: 40px;
-    line-height: 20px;
+    padding-left: rem(40px);
+    line-height: rem(20px);
     cursor: pointer;
 }
 // Перед метками добавим стилизованные контейнеры для наших пользовательских элементов
@@ -93,10 +109,10 @@
 .form__radio:not(:checked) + label:before {
     content: "";
     position: absolute;
-    left: 0px;
-    top: -6px;
-    width: 26px;
-    height: 26px;
+    left: rem(0px);
+    top: rem(-6px);
+    width: rem(26px);
+    height: rem(26px);
     border: 1px solid #dddddd;
     background-color: #ffffff;
 }
@@ -118,13 +134,13 @@
 } 
 .form__checkbox:checked + label:after,
 .form__checkbox:not(:checked) + label:after {
-    left: 7px;
-    top: 2px;
-    width: 9px;
-    height: 4px;
+    left: rem(7px);
+    top: rem(2px);
+    width: rem(9px);
+    height: rem(4px);
     border-radius: 1px;
     border-left: 4px solid  $green;
-    border-bottom: 4px solid  $green;
+    border-bottom: rem(4px) solid  $green;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -133,10 +149,10 @@
 }
 .form__radio:checked + label:after,
 .form__radio:not(:checked) + label:after {
-    left: 7px;
-    top: 1px;
-    width: 14px;
-    height: 14px;
+    left: rem(7px);
+    top: rem(1px);
+    width: rem(14px);
+    height: rem(14px);
     border-radius: 100%;
     background-color: $green;
 }
