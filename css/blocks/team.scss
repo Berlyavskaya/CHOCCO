@@ -1,0 +1,110 @@
+.team {
+   
+    &__list {
+        width: 100%;
+        max-width: rem(940px);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include tablets {
+            max-width: rem(500px);           
+        }
+        @include phones {
+            max-width: rem(430px);
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 24%;
+        position: relative;
+        @include tablets {
+            max-width: 50%;
+            margin-bottom: rem(20px);
+        }        
+    }   
+    &__box-avatar {
+        max-width: rem(220px);
+        max-height: rem(288px);
+        background-color: rgb(146, 217, 250);
+        margin-bottom: rem(15px);
+        overflow: hidden;
+        @include phones {
+            max-width: rem(142px);
+            max-height: rem(184px);
+        }
+    }
+    &__avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    &__item:nth-child(1) &__avatar {
+        object-position: rem(-104px) rem(0px);
+        @include phones {
+            object-position: rem(-64px) rem(0px);
+        }
+    }
+    &__item:nth-child(2) &__avatar {
+        object-position: rem(0px) rem(-20px);
+    }
+    &__item:nth-child(3) &__avatar {
+        object-position: rem(0px) rem(-40px);
+        @include tablets {
+            object-position: rem(0px) rem(-20px);
+        }
+        @include phones {
+            object-position: rem(0px) rem(-20px);
+        }
+    }
+    &__item:nth-child(4) &__avatar {
+        object-position: rem(0px) rem(-4px);
+        @include tablets {
+            object-position: rem(0px) rem(0px);
+        }
+    }
+    &__member {
+        width: 100%;
+        text-align: center;        
+        
+    }
+    &__name {        
+        font-size: rem(21px);
+        font-weight: 500;
+        font-style: normal;
+        color: #323232;
+        margin-bottom: rem(10px);
+    }
+    &__post {
+        font-size: rem(18px);
+        font-weight: normal;
+        color: #281e1e;
+    }
+    &__desc {
+        font-size: rem(18px);
+        font-weight: 300;
+        color: #666666;
+    }
+    &__popup {        
+        z-index: 2;
+        overflow: hidden;
+        height: 0;        
+        transition: height 0.5s;
+        
+    }
+    &__member:hover {
+        .team__popup {
+            position: absolute;
+            overflow: visible;
+            height: auto;  
+            border-radius: 20px;        
+            @include tablets {    
+                position: initial;            
+                margin-bottom: rem(10px);
+            }              
+        }
+    }
+   
+}

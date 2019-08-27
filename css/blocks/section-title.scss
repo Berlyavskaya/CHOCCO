@@ -3,13 +3,19 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #0d0d0d;
+    @include phones {
+        font-size: rem(40px);
+    }
     &--white {
         position: absolute;
         color: white;
         top: rem(99px);
         left: rem(79px);
     }
-}
-.section-title--order {
-    color: $green;
+    &--order {
+        color: $green;
+    }
+    &--team {
+        margin-bottom: rem(58px);
+    }
 }

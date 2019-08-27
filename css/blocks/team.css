@@ -1,28 +1,39 @@
 /*
 Error: Undefined mixin 'tablets'.
-        on line 33 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss, in `tablets'
-        from line 33 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss
+        on line 9 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\team.scss, in `tablets'
+        from line 9 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\team.scss
 
-28:     padding-bottom: 4%;
-29:     padding-left: 5%;
-30:     background-image: url(/img/reviews-item-bg.png);
-31:     background-repeat: no-repeat;
-32:     background-position: top right;
-33:     @include tablets {
-34:         flex-direction: column;
-35:         align-items: center;  
-36:         padding-left: 0;
-37:     }
-38: }
+4:         width: 100%;
+5:         max-width: rem(940px);
+6:         display: flex;
+7:         justify-content: space-between;
+8:         flex-wrap: wrap;
+9:         @include tablets {
+10:             max-width: rem(500px);           
+11:         }
+12:         @include phones {
+13:             max-width: rem(430px);
+14:         }
 
 Backtrace:
-C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss:33:in `tablets'
-C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss:33
+C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\team.scss:9:in `tablets'
+C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\team.scss:9
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -66,4 +77,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablets'.\A         on line 33 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss, in `tablets'\A         from line 33 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss\A \A 28:     padding-bottom: 4%;\A 29:     padding-left: 5%;\A 30:     background-image: url(/img/reviews-item-bg.png);\A 31:     background-repeat: no-repeat;\A 32:     background-position: top right;\A 33:     @include tablets {\A 34:         flex-direction: column;\A 35:         align-items: center;  \A 36:         padding-left: 0;\A 37:     }\A 38: }"; }
+  content: "Error: Undefined mixin 'tablets'.\A         on line 9 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\team.scss, in `tablets'\A         from line 9 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\team.scss\A \A 4:         width: 100%;\A 5:         max-width: rem(940px);\A 6:         display: flex;\A 7:         justify-content: space-between;\A 8:         flex-wrap: wrap;\A 9:         @include tablets {\A 10:             max-width: rem(500px);           \A 11:         }\A 12:         @include phones {\A 13:             max-width: rem(430px);\A 14:         }"; }
