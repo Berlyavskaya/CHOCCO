@@ -6,6 +6,10 @@
     align-self: flex-start;
     @include tablets {
         align-self: center;
+        width: 75%;
+    }
+    @include phones {
+        width: 100%;
     }
     
         &__list {

@@ -11,7 +11,7 @@
 }
 .map {
     object-fit: none;
-    object-position: rem(50px) rem(-300px);
+    object-position: 0.125rem -18.75rem;
     @include tablets {
         object-position: -10.875rem -23.75rem;
     }

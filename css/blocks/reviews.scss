@@ -58,6 +58,9 @@
         align-items: center; 
         max-width: 50%;
     }
+    @include phones {
+        max-width: 100%;
+    }
 }
 .review__box-avatar {
     max-width: rem(253px);

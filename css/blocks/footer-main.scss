@@ -4,18 +4,31 @@
     align-items: center;
     padding-top: rem(20px);
     padding-bottom: rem(20px);
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;    
+        text-align: center;
+    }
        
     &__address {
         font-size: 21px;
         font-weight: normal;
         color: #010101;
-        
+        @include phones {
+            margin-bottom: rem(20px);
+        }        
     }
     &__tel {
         position: relative;
         font-size: 21px;
         color: $green;
-        padding-left: 15px;
+        padding-left: 15px;        
+    }
+    &__contacts {
+        @include phones {
+            margin-bottom: rem(20px);
+        }
     }
     &__tel::before {
         content: '';
@@ -25,16 +38,5 @@
         left: 0;
         width: rem(12px);
         height: rem(11px);
-    }
-}
-.footer-main{
-    @include phones {
-        flex-direction: column;
-        align-items: center;
-    } 
-}
-.footer-main__address {
-    @include phones {
-        text-align: center;
     }
 }

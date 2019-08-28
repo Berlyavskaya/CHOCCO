@@ -22,8 +22,11 @@
     width: 45%;
     margin-top: rem(6px);
     margin-bottom: rem(55px);
+    @include tablets {
+        width: 55%;
+    }
     @include phones {
-        width: 44%;
+        width: 87%;
     }
 }
 .reasons__list {
@@ -48,10 +51,11 @@
         width: 60%;
     }
     @include phones {
-        width: 48%;
+        width: 95%;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: nowrap;
+        margin-bottom: rem(40px);
     }
 }
 .reasons__pic {
@@ -66,6 +70,9 @@
     
     @include tablets {
         margin-bottom: rem(20px);
+    }
+    @include tablets {
+        margin-bottom: 0;
     }
 }
 .reasons__icon {
