@@ -1,0 +1,18 @@
+.box-map {    
+    max-width: 100%;
+    max-height: rem(650px);   
+    overflow: hidden;
+    @include tablets {
+        max-height: rem(534px); 
+    }
+    @include phones {
+        max-height: rem(526px);
+    }
+}
+.map {
+    object-fit: none;
+    object-position: rem(50px) rem(-300px);
+    @include tablets {
+        object-position: -10.875rem -23.75rem;
+    }
+}

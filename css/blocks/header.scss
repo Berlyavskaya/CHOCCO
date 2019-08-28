@@ -3,6 +3,12 @@
     justify-content: space-between; 
     align-items: center;
     width: 100%;
+    @include tablets {
+        width: 60%;
+    }
+    @include phones {
+        width: 45%;
+    }
 }
 .logo {
     width:rem(53px); 

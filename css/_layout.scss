@@ -28,6 +28,7 @@ html {
 }
 .container {
     width: 95%;
+    max-width: 940px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -36,6 +37,12 @@ html {
     height: 100%;
     position: relative;
     z-index: 1;
+    @include tablets {
+        max-width: rem(768px);
+    }
+    @include phones {
+        max-width: rem(480px);
+    }
 }
 
 h1,
@@ -74,7 +81,7 @@ footer {
     position: relative;
     width: 100%;
     @include tablets {
-        width: auto;
+        width: 100%;
     }
 }
 * {

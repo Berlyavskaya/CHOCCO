@@ -1,0 +1,22 @@
+.social__icon {
+    fill: #ccc;
+}
+.social__icon:hover {
+    fill: black;
+    transition: 0.5s;
+}
+.social__link {
+    display: flex;
+    justify-content: space-between;
+    width: rem(20px);
+    height: rem(20px);
+    
+}
+.social__item {
+    margin-right: rem(20px);
+    
+}
+.social__list {
+    display: flex;
+    margin-right: rem(-20px);
+}

@@ -22,10 +22,15 @@
     width: 45%;
     margin-top: rem(6px);
     margin-bottom: rem(55px);
+    @include phones {
+        width: 44%;
+    }
 }
 .reasons__list {
     display: flex;
     justify-content: space-between;
+    max-width: rem(940px);
+
 
     @include tablets {
         flex-direction: column;
@@ -42,6 +47,12 @@
     @include tablets {
         width: 60%;
     }
+    @include phones {
+        width: 48%;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
 }
 .reasons__pic {
     position: relative;
@@ -52,25 +63,20 @@
     width: rem(75px);
     height: rem(70px);  
     margin-bottom: rem(35px);
-}
-.reasons__pic::before {
-    content: '';
-    position: absolute;
-    background-image: url(/icons/reasons_sprites.png);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: rem(75px);
-    height: rem(70px);  
-    background-position: rem(-6px) rem(-11px);
-} 
     
-
-.reasons__item:nth-child(2) .reasons__pic::before {
-    background-position: rem(-94.5px) rem(-10.5px);
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
 }
-.reasons__item:nth-child(3) .reasons__pic::before {
-    background-position: rem(-185px) rem(-9px);
+.reasons__icon {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    width: 75px;
+    height: 69px;
+    stroke: #2a2a29;
+    stroke-width: 1px;
+    fill: transparent;
 }
 .reasons__title {
     font-size: rem(27px);
@@ -79,12 +85,25 @@
     color: #000000;
     margin-bottom: rem(15px);
 }
+.reasons__box-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include phones {
+        width: 65%;
+        align-items: flex-start;
+    }
+}
 .reasons__desc {
     text-align: center;
     font-size: rem(18px);
     font-weight: 300;
     font-style: normal;
     color: #666666;
+    @include phones {
+        text-align: left;
+    }
+   
 }
 .reasons__item:nth-child(2)::before {
     position: absolute;

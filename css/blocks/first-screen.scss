@@ -9,7 +9,7 @@
     padding-top: rem(24px);
     padding-bottom: rem(47px);
     @include tablets {
-        background: url(/img/product_bg.png) 51% -1%/37%, url(/img/1scr_bg.png) center right/auto, #61c4d9; 
+        background: url(/img/product_bg.png) 51% 3%/34%, url(/img/1scr_bg.png) center right/auto, #61c4d9; 
         background-repeat: no-repeat;           
     }
     &__content {
@@ -19,6 +19,11 @@
         align-items: center;
         
         @include tablets {
+            width: auto;
+            align-items: flex-end; 
+            margin-bottom: rem(43px);          
+        }
+        @include phones {
             width: auto;
             align-items: flex-end; 
             margin-bottom: rem(43px);          
@@ -33,6 +38,11 @@
     top: rem(50px);
     background: url(/img/berries-1scr-bg.png) 41% 100%/76%;
     background-repeat: no-repeat;
+
+    @include phones {
+        background: url(/img/berries-1scr-bg.png) -60% 10%/84%;
+        background-repeat: no-repeat;          
+    }
 }
 .img-product {
     margin-right: rem(-16px);

@@ -1,49 +1,37 @@
 .advantages {
     font-family: 'Alegreya Sans';
     font-size: rem(16px);
-    &__list {
+    fill: blue;
+    width: 40%;
+    align-self: flex-start;
+    @include tablets {
+        align-self: center;
+    }
+    
+        &__list {
         display: flex;
+        justify-content: space-between;
     }
     &__item {
-        width: rem(125px);
-        padding-left: rem(49px);
+        width: 29%;
+        // width: rem(125px);
+        // padding-left: rem(49px);
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-start;
         position: relative;
-        margin-right: rem(49px);
     }    
+    &__desc {
+        width: 60%;
+        margin-left: 10px;
+    }
     &__item:last-child {
         margin-right: 0;
     }
 }
-.advantages__item:nth-child(1)::before {
-    content: "";
-    position: absolute;
-    background-image: url(/icons/advantages-sprites.png);
-    background-position: rem(-78px) rem(-12px);
-    top: 0;
-    left: 0;
-    width: rem(44px);
-    height: rem(41px);
-}
-.advantages__item:nth-child(2)::before {
-    content: "";
-    position: absolute;
-    background-image: url(/icons/advantages-sprites.png);
-    background-position: rem(-146px) rem(-12px);
-    top: 0;
-    left: rem(0px);
-    width: rem(50px);
-    height: rem(40px);
-}
-.advantages__item:nth-child(2) {
-    padding-left: rem(67px);
-}
-.advantages__item:nth-child(3)::before {
-    content: "";
-    position: absolute;
-    background-image: url(/icons/advantages-sprites.png);
-    background-position: rem(-220px) rem(-12px);
-    top: 0;
-    left: 0;
-    width: rem(42px);
-    height: rem(42px);
+.advantages__icon {
+    stroke: #b0f7ff;
+    fill: transparent;
+    width: 50px;
+    height: 42px;
 }
