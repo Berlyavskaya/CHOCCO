@@ -6,8 +6,7 @@
     font-style: normal;
     line-height: 1.67;
 }
-.form {
-    
+.form {    
     width: 100%;
 }
 .form__elem {
@@ -22,6 +21,9 @@
 }
 .form__col {
     width: 48%;
+    @include tablets {
+        width: 60%;
+    }
     @include phones {
         width: 100%;
     }

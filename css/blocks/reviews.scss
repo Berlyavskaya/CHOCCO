@@ -18,6 +18,11 @@
 }
 .review__list {
     margin-bottom: rem(20px);
+    @include tablets {
+        display: flex;
+        justify-content: center;
+    }
+    
 }
 .review__item {
     display: flex;
@@ -34,6 +39,7 @@
         flex-direction: column;
         align-items: center;  
         padding-left: 0;
+        width: 60%;
     }
 }
 .review__item::before {
@@ -56,7 +62,7 @@
         display: flex;
         flex-direction: column;
         align-items: center; 
-        max-width: 50%;
+        max-width: 100%;
     }
     @include phones {
         max-width: 100%;
@@ -67,10 +73,21 @@
     height: rem(259px);
     margin-right: rem(20px);
     overflow: hidden;
+    @include tablets {
+        max-width: rem(202px);
+        height: rem(207px);
+        margin-right: 0;
+    }
+    @include phones {
+        max-width: rem(121px);
+        height: rem(124px);
+        margin-right: 0;
+    }
 }
 .review__avatar {
     min-width:100%;
     object-fit: none;    
+    
 }
 .review__subtitle {
     font-size: rem(30px);
@@ -79,7 +96,7 @@
     color: #323232;
     margin-bottom: rem(21px);
     @include tablets {
-        max-width: 50%;
+        max-width: 70%;
         text-align: center; 
     }
 }
@@ -92,6 +109,7 @@
     width: 80%;
     @include tablets {
        text-align: center;
+       width: 88%;
     }
 }
 .review__username {
@@ -108,6 +126,12 @@
 }
 .review__item:nth-child(3) .review__avatar {
     object-position: rem(-204px) rem(-15px);
+    @include tablets {
+        object-position: rem(-222px) rem(-30px);
+    }
+    @include phones {
+        object-position: rem(-222px) rem(-30px);
+    }
 }
 .review__item:nth-child(1),
 .review__item:nth-child(2){
