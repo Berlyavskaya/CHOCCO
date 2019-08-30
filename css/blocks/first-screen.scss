@@ -9,11 +9,11 @@
     padding-top: rem(24px);
     padding-bottom: rem(47px);
     @include tablets {
-        background: url(/img/product_bg.png) 51% 13%/34%, url(/img/1scr_bg.png) center right/auto, #61c4d9; 
+        background: url(/img/product_bg.png) 51% 13%/48%, url(/img/1scr_bg.png) 92% 9%/53%, #61c4d9; 
         background-repeat: no-repeat;           
     }
     @include phones {
-        background: url(/img/product_bg.png) 51% 3%/34%, url(/img/1scr_bg.png) center right/auto, #61c4d9; 
+        background: url(/img/product_bg.png) 51% 10%/60%, url(/img/1scr_bg.png) 92% 0%/59%, #61c4d9; 
         background-repeat: no-repeat;           
     }
     &__content {
@@ -47,7 +47,7 @@
         background-repeat: no-repeat;          
     }
     @include phones {
-        background: url(/img/berries-1scr-bg.png) -60% 10%/84%;
+        background: url(/img/berries-1scr-bg.png) 169% 19%/120%;
         background-repeat: no-repeat;          
     }
 }

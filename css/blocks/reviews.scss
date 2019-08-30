@@ -39,7 +39,13 @@
         flex-direction: column;
         align-items: center;  
         padding-left: 0;
-        width: 60%;
+        width: 64%;
+    }
+    @include  phones {
+        padding-top: 55px;
+    }
+    @include  phones {
+        width: 100%;
     }
 }
 .review__item::before {
@@ -48,7 +54,7 @@
     width: rem(90px);
     height: rem(50px);
     top: rem(-25px);
-    left: 46%;
+    translate: 50% 50%;
     background-color: white;
     border-radius: 50%;
 }
@@ -130,7 +136,7 @@
         object-position: rem(-222px) rem(-30px);
     }
     @include phones {
-        object-position: rem(-222px) rem(-30px);
+        object-position: -18.875rem -4.875rem;
     }
 }
 .review__item:nth-child(1),

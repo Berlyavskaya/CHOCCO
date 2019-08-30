@@ -17,10 +17,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 24%;
+        flex: 1;
         position: relative;
         @include tablets {
-            max-width: 50%;
+            min-width: 50%;
             margin-bottom: rem(20px);
         }        
     }   
@@ -66,17 +66,32 @@
         }
     }
     &__member {
-        width: 100%;
-        text-align: center;        
-        
+        width: 100%;     
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include tablets {
+            width: 80%;
+        }
     }
-    &__name {        
+    &__name {  
+        position: relative;      
         font-size: rem(21px);
         font-weight: 500;
         font-style: normal;
         color: #323232;
         margin-bottom: rem(10px);
+        padding-right: rem(17px);
     }
+    &__name::after {
+        content: ''; 
+        position: absolute; 
+        right: 0; 
+        top: rem(8px);
+        border-left: 4.5px solid transparent;
+	    border-right: 4.5px solid transparent;
+        border-top: 9px solid $green;
+       }
     &__post {
         font-size: rem(18px);
         font-weight: normal;
@@ -92,19 +107,26 @@
         overflow: hidden;
         height: 0;        
         transition: height 0.5s;
-        
+        text-align: center;
     }
     &__member:hover {
         .team__popup {
-            position: absolute;
+            // position: absolute;
+            margin-top: 40px;
             overflow: visible;
-            height: auto;  
-            border-radius: 20px;        
-            @include tablets {    
-                position: initial;            
-                margin-bottom: rem(10px);
-            }              
+            height: auto;        
+            @include tablets {              
+                margin-top: rem(10px);
+            }      
+            @include phones {
+                margin-top: 0;
+            }                 
         }
-    }
-   
+        .team__name::after {
+            transform: rotate(180deg);
+        }  
+    }  
+
 }
+
+ 

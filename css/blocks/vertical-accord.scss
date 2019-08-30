@@ -8,12 +8,20 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
+    position: relative;
     &__list, &__item, &__trigger, &__content {
         display: flex;
         height:100%;
     }
+    &__list {
+        @include phones {
+            justify-content: flex-end;
+          }
+    }
     &__item--active {
+        @include phones {
+            width: 48%;  
+          }
         .vertical-accord__wrap-content {
             width: 100%;
             max-width: rem(430px);
@@ -27,6 +35,7 @@
         justify-content: center;
         padding-bottom: rem(20px);
     }
+   
     &__title {
         position: relative;
         font-size: rem(48px);
@@ -53,3 +62,4 @@
     }
     
 }
+
