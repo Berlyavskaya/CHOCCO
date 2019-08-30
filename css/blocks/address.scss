@@ -1,0 +1,29 @@
+    
+.address {
+    font-size: 21px;
+    font-weight: normal;
+    color: #010101;
+    @include phones {
+        margin-bottom: rem(20px);
+    }         
+    &__tel {
+        position: relative;
+        font-size: 21px;
+        color: $green;
+        padding-left: 15px;        
+    }
+    &__address {
+        @include phones {
+            margin-bottom: rem(20px);
+        }
+    }
+    &__tel::before {
+        content: '';
+        position: absolute;
+        background-image: url(/img/phone.png) ;
+        top: rem(5px);
+        left: 0;
+        width: rem(12px);
+        height: rem(11px);
+    }
+}

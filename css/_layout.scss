@@ -37,6 +37,13 @@ html {
     height: 100%;
     position: relative;
     z-index: 1;
+    &--footer-main {
+        flex-direction: row;
+        justify-content: space-between;
+        @include phones {
+            flex-direction: column;
+        }
+    }
     @include tablets {
         max-width: rem(768px);
     }
