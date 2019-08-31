@@ -52,7 +52,7 @@
     }
     &__content {
         padding: rem(50px) rem(27px) rem(50px) rem(27px) ;
-        min-width: 430px;
+        min-width: rem(430px);
         background-color: rgba(#2f3234, 0.93);
         font-size: 16px;
         font-weight: normal;

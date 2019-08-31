@@ -42,7 +42,7 @@
         width: 64%;
     }
     @include  phones {
-        padding-top: 55px;
+        padding-top: rem(55px);
     }
     @include  phones {
         width: 100%;
