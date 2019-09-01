@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 442.326 442.326" style="enable-background:new 0 0 442.326 442.326;" xml:space="preserve">
-<path d="M430.024,68.87l-56.568-56.568C365.523,4.369,354.976,0,343.757,0c-11.218,0-21.766,4.369-29.699,12.302
+<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px">
+	<symbol id="slider-icon" viewBox="0 0 442.326 442.326" >
+	<path d="M430.024,68.87l-56.568-56.568C365.523,4.369,354.976,0,343.757,0c-11.218,0-21.766,4.369-29.699,12.302
 	c-8.292,8.293-12.54,19.4-12.3,30.598c-11.214-0.246-22.305,4.009-30.597,12.301c-8.293,8.293-12.542,19.399-12.3,30.598
 	c-11.206-0.274-22.305,4.008-30.598,12.3c-8.292,8.293-12.54,19.4-12.3,30.597c-11.214-0.228-22.305,4.008-30.597,12.301h-0.001
 	L45.358,281.003c-0.008,0.008-0.015,0.016-0.023,0.023L3.056,323.304c-1.168,1.126-2.077,2.551-2.594,4.2
@@ -61,4 +58,5 @@
 </g>
 <g>
 </g>
+</symbol>
 </svg>
