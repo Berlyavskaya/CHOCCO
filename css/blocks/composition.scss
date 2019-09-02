@@ -1,0 +1,45 @@
+.composition {
+    display: flex;
+    flex-wrap: wrap;
+    @include tablets {
+        justify-content: center;
+    }
+    &__desc {
+        width: 90%;
+        font-size: rem(18px);
+        font-weight: normal;
+        font-style: normal;
+        color: #666666;
+        margin-bottom: rem(45px);
+        @include tablets {
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &__options {
+        display: flex;        
+        width: 100%;
+        margin-bottom: rem(40px);
+        @include tablets {
+            justify-content: center;
+        }
+    }
+    &__calories, &__weight {
+        display: flex;
+        flex-direction: column;
+        font-size: rem(18px);
+        font-weight: normal;
+    }
+    &__calories {
+        margin-right: rem(60px);
+    }
+    &__amount {
+        font-weight: bold;
+    }
+    &__price {
+        font-size: rem(60px);
+        font-weight: 300;
+        font-style: normal;
+        margin-right: rem(30px);
+    }
+}

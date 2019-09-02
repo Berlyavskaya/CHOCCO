@@ -2,29 +2,29 @@
     display: none;
     flex-direction: column;
     justify-content: center;
-    width: 24px;
-    height: 22px;
+    width: rem(24px);
+    height: rem(22px);
     @include tablets {
         display: flex;
     }
     &__bars {
         position: relative;
-        width: 24px;
-        height: 4px;
+        width: rem(24px);
+        height: rem(4px);
         background-color: #fff;
-        border-radius: 4px;
+        border-radius: rem(4px);
     }
     &__bars::before, &__bars::after {
         position: absolute;
         content: '';
-        top: 7px;
+        top: rem(7px);
         left: 0;
-        width: 24px;
-        height: 4px;
+        width: rem(24px);
+        height: rem(4px);
         background-color: #fff;
-        border-radius: 4px;
+        border-radius: rem(4px);
     }
     &__bars::after {
-        top: -7px;
+        top: rem(-7px);
     }
 }

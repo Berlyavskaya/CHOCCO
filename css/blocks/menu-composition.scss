@@ -1,0 +1,48 @@
+
+.menu-composition {
+    position: absolute;
+    top: 0;
+    left: rem(90px);
+    max-width: rem(270px);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: rem(5px);
+    border: solid rem(1px) #efefef;
+    background-color: #fffffff1;
+    padding: rem(26px) rem(20px) rem(26px) rem(30px);
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    @include tablets {
+        top: -116%;
+        left: 32%;
+    }
+    @include phones {
+        top: -108%;
+        left: 13%;
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+       min-height: rem(55px);
+       align-items: center;
+        }
+    &__icon  {
+        width: rem(35px);
+        height: rem(35px);
+        margin-right: rem(25px);
+    }
+    &__component {
+        width: 60%;
+        font-size: rem(16px);
+        font-weight: 500;
+        font-style: normal;
+        color: #333333;
+    }
+    &__weight {
+        font-size: rem(16px);
+        font-weight: normal;
+        color: #343333;
+    }
+}
