@@ -1634,12 +1634,12 @@ footer {
     @media screen and (max-width: 768px) {
       .slider__box-icon {
         position: absolute;
-        top: -115%;
+        top: -120%;
         left: 80%; } }
     @media screen and (max-width: 480px) {
       .slider__box-icon {
         position: absolute;
-        top: -107%;
+        top: -120%;
         left: 78%; } }
   .slider__icon-name {
     font-size: 0.875rem;
@@ -1710,7 +1710,7 @@ footer {
 .menu-composition {
   position: absolute;
   top: 0;
-  left: 5.625rem;
+  left: 21%;
   max-width: 16.875rem;
   display: flex;
   flex-wrap: wrap;
@@ -1723,12 +1723,12 @@ footer {
   overflow: hidden; }
   @media screen and (max-width: 768px) {
     .menu-composition {
-      top: -116%;
+      top: -120%;
       left: 32%; } }
   @media screen and (max-width: 480px) {
     .menu-composition {
-      top: -108%;
-      left: 13%; } }
+      top: -120%;
+      left: 18%; } }
   .menu-composition__item {
     width: 100%;
     display: flex;

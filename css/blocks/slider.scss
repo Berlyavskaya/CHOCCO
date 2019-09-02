@@ -121,12 +121,12 @@
         margin-bottom: rem(24px);  
         @include tablets {
            position: absolute;
-           top: -115%;
+           top: -120%;
            left: 80%;
         }     
         @include phones {
             position: absolute;
-            top: -107%;
+            top: -120%;
             left: 78%;
         }       
         
