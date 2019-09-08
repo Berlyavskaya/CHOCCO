@@ -13,23 +13,25 @@ sendBtn.addEventListener ('click', function(evt){
         //     console.log ('все ок');
         // }
 
-        const data = {
-            name: formOrder.elements.name.value,
-            phone: formOrder.elements.phone.value,
-            comment: formOrder.elements.comment.value
-        };
+        
         
         var formdata = new FormData(formOrder);
         console.log (formdata);
-        formdata.append(email, formOrder.elements.email.value);
+        formdata.append('to', 'mail@mail.ru');
 
-        
+        var data = {
+            name: formOrder.elements.name.value,
+            phone: formOrder.elements.phone.value,
+            comment: formOrder.elements.comment.value,
+            to: formdata.get('to')
+        };
+        console.log (data);
 
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
-        xhr.open(POST, 'https://webdev-api.loftschool.com/sendmail/fail');
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         console.log (xhr.open);
-        xhr.send (JSON.stringify(data));
+        xhr.send (JSON.stringify(formdata));
         xhr.addEventListener('load', () => {
             if (xhr.response.status) {
                 console.log('ok');

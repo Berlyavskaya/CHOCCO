@@ -11,4 +11,5 @@ close.addEventListener('click', function(evt){
 hamburger.addEventListener('click', function(evt){
      if (fsMenu.style.display='none')
      fsMenu.style.display='flex'
+     fsMenu.style.display='flex'
 })
