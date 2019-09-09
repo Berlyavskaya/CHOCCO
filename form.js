@@ -1,13 +1,16 @@
 const formOrder = document.querySelector ('#form-order');
 const sendBtn = document.querySelector ('#send-btn');
 var overlayBox = document.querySelector('.overlay-box');
+var overlayTextTrue = document.querySelector('.overlay__text--true');
+var overlayTextFalse = document.querySelector('.overlay__text--false');
+
 
 sendBtn.addEventListener ('click', function(evt){
     evt.preventDefault();
 
     sendBtn.addEventListener('click', evt => {
         evt.preventDefault();
-        overlayBox.style.display='flex';
+        // overlayBox.style.display='flex';
         
         // if (validateForm(formOrder)) {
         //     console.log ('все ок');
@@ -31,11 +34,19 @@ sendBtn.addEventListener ('click', function(evt){
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         console.log (xhr.open);
-        xhr.send (JSON.stringify(formdata));
+        xhr.send (JSON.stringify(data));
         xhr.addEventListener('load', () => {
-            if (xhr.response.status) {
+            if (xhr.status === 200) {
+                console.log('ошибка');
+                overlayBox.style.display='flex';
+                overlayTextTrue.style.display='none';
+                overlayTextFalse.style.display='flex';            
+            }
+            else {
                 console.log('ok');
                 overlayBox.style.display='flex';
+                overlayTextFalse.style.display='none';
+                overlayTextTrue.style.display='flex';
             }
             
         })

@@ -1808,7 +1808,9 @@ footer {
     line-height: 30px;
     color: #000000;
     font-weight: 400;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    text-align: center;
+    width: 70%; }
 
 .overlay-box {
   background-color: #000000d7;
