@@ -19,7 +19,7 @@ sendBtn.addEventListener ('click', function(evt){
         
         
         var formdata = new FormData(formOrder);
-        console.log (formdata);
+        // console.log (formdata);
         formdata.append('to', 'mail@mail.ru');
 
         var data = {
@@ -33,8 +33,9 @@ sendBtn.addEventListener ('click', function(evt){
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        console.log (xhr.open);
-        xhr.send (JSON.stringify(data));
+        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        // console.log (xhr.open);
+        xhr.send (formdata);
         xhr.addEventListener('load', () => {
             if (xhr.status === 200) {
                 console.log('ошибка');
