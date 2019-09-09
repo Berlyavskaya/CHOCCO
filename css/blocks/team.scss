@@ -36,15 +36,15 @@
         }
     }
     &__avatar {
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
         object-fit: cover;
         
     }
     &__item:nth-child(1) &__avatar {
         object-position: rem(-104px) rem(0px);
         @include phones {
-            object-position: rem(-64px) rem(0px);
+            object-position: -12rem -6rem;
         }
     }
     &__item:nth-child(2) &__avatar {
@@ -56,7 +56,7 @@
             object-position: rem(0px) rem(-20px);
         }
         @include phones {
-            object-position: rem(0px) rem(-20px);
+            object-position: -4rem -5.25rem;
         }
     }
     &__item:nth-child(4) &__avatar {
@@ -64,6 +64,10 @@
         @include tablets {
             object-position: rem(0px) rem(0px);
         }
+        @include phones {
+            object-position: -4rem -1rem;
+        }
+        
     }
     &__member {
         width: 100%;     

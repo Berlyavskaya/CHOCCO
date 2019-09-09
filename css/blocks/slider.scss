@@ -21,15 +21,17 @@
         background: url(/icons/arrow-scroll.png) center center no-repeat, #f8faf9;
         z-index: 3;
         @include tablets {
-            background: url(/icons/arrow-scroll.png) left center no-repeat, transparent;
+            background: url(/icons/arrow-scroll.png) 100%  45% no-repeat, #f8faf9;
+            width: 5.8375rem;
         }
         @include phones {
-            background: url(/icons/arrow-scroll.png) left center no-repeat, transparent;
+            background: url(/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
+            width: 3.375rem;
         }
         
     }
     &__arrow:last-child {
-        transform: rotate(180deg);
+        transform: scale(-1, 1);
         position: absolute;
         top: 0;
         right: 0;
@@ -39,10 +41,12 @@
         background: url(/icons/arrow-scroll.png) center center no-repeat,#f8faf9;
         z-index: 3;
         @include tablets {
-            background: url(/icons/arrow-scroll.png) left center no-repeat, transparent;
+            background: url(/icons/arrow-scroll.png) 100%  45% no-repeat, #f8faf9;
+            width: 5.8375rem;
         }
         @include phones {
-            background: url(/icons/arrow-scroll.png) left center no-repeat, transparent;
+            background: url(/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
+            width: 3.375rem;
         }
     }
     &__box {               
@@ -63,11 +67,10 @@
         position: relative;
         background-color: transparent;
         @include tablets {
-            max-width: rem(565px);
+            max-width: 36.3125rem;
         }
         @include phones {
-            padding-left: rem(33px);
-            padding-right: rem(33px);
+            max-width: 26.3125rem;
         }
     }
     &__item {       
@@ -75,6 +78,9 @@
         display: flex;
         align-items: center;  
         min-width: rem(845px);  
+        will-change: right;
+        transition: right;
+
         @include tablets {
             flex-direction: column;
             min-width: rem(568px);
@@ -84,15 +90,15 @@
             min-width: rem(420px);
         }
     }
-    &__item:last-child {
-        // display: none;
-        @include tablets {
-            display: none;
-        }
-        @include phones {
-            display: none;
-        }
-    }
+    // &__item:last-child {
+    //     // display: none;
+    //     @include tablets {
+    //         display: none;
+    //     }
+    //     @include phones {
+    //         display: none;
+    //     }
+    // }
     &__box-pic {
         margin-right: rem(80px);
         
@@ -157,7 +163,7 @@
         @include tablets {
             text-align: center;
             font-size: rem(30px);
-            width: 80%;
+            width: 78%;
         }
         @include phones {
             text-align: center;

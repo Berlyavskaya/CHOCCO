@@ -10,7 +10,6 @@ sendBtn.addEventListener ('click', function(evt){
 
     sendBtn.addEventListener('click', evt => {
         evt.preventDefault();
-        // overlayBox.style.display='flex';
         
         // if (validateForm(formOrder)) {
         //     console.log ('все ок');
@@ -19,7 +18,6 @@ sendBtn.addEventListener ('click', function(evt){
         
         
         var formdata = new FormData(formOrder);
-        // console.log (formdata);
         formdata.append('to', 'mail@mail.ru');
 
         var data = {
@@ -28,7 +26,6 @@ sendBtn.addEventListener ('click', function(evt){
             comment: formOrder.elements.comment.value,
             to: formdata.get('to')
         };
-        console.log (data);
 
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';

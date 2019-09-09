@@ -743,7 +743,8 @@ footer {
   top: 10%;
   left: 0;
   background: url(/img/berries-reasons-bg.png) 0% 99%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: 2; }
 
 .reasons__subtitle {
   font-size: 1.125rem;
@@ -1260,22 +1261,24 @@ footer {
   .vertical-accord__list, .vertical-accord__item, .vertical-accord__trigger, .vertical-accord__content {
     display: flex;
     height: 100%; }
-  @media screen and (max-width: 480px) {
-    .vertical-accord__list {
-      justify-content: flex-end; } }
-  @media screen and (max-width: 480px) {
-    .vertical-accord__item--active {
-      width: 48%; } }
+  .vertical-accord__list {
+    justify-content: flex-end; }
+    @media screen and (max-width: 768px) {
+      .vertical-accord__list {
+        width: 100%; } }
+    @media screen and (max-width: 480px) {
+      .vertical-accord__list {
+        justify-content: flex-end; } }
   .vertical-accord__item--active .vertical-accord__wrap-content {
-    width: 100%;
-    max-width: 26.875rem; }
+    width: 100%; }
   .vertical-accord__trigger {
     width: 6.25rem;
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
-    padding-bottom: 1.25rem; }
+    padding-bottom: 1.25rem;
+    line-height: 0; }
   .vertical-accord__title {
     position: relative;
     font-size: 3rem;
@@ -1285,9 +1288,17 @@ footer {
     writing-mode: vertical-rl;
     transform: rotate(180deg); }
   .vertical-accord__wrap-content {
+    position: relative;
     overflow: hidden;
     transition: 0.5s;
-    width: 0; }
+    width: 0;
+    max-width: 26.875rem; }
+    @media screen and (max-width: 768px) {
+      .vertical-accord__wrap-content {
+        max-width: 32.875rem; } }
+    @media screen and (max-width: 480px) {
+      .vertical-accord__wrap-content {
+        max-width: 27.875rem; } }
   .vertical-accord__content {
     padding: 3.125rem 1.6875rem 3.125rem 1.6875rem;
     min-width: 26.875rem;
@@ -1297,6 +1308,12 @@ footer {
     font-style: normal;
     line-height: 1.5;
     color: #ffffff; }
+    @media screen and (max-width: 768px) {
+      .vertical-accord__content {
+        min-width: 32.875rem; } }
+    @media screen and (max-width: 480px) {
+      .vertical-accord__content {
+        min-width: 27.875rem; } }
 
 .hamburger-menu-link {
   display: none;
@@ -1358,14 +1375,12 @@ footer {
       max-width: 8.875rem;
       max-height: 11.5rem; } }
 .team__avatar {
-  width: 100%;
-  height: 100%;
   object-fit: cover; }
 .team__item:nth-child(1) .team__avatar {
   object-position: -6.5rem 0rem; }
   @media screen and (max-width: 480px) {
     .team__item:nth-child(1) .team__avatar {
-      object-position: -4rem 0rem; } }
+      object-position: -12rem -6rem; } }
 .team__item:nth-child(2) .team__avatar {
   object-position: 0rem -1.25rem; }
 .team__item:nth-child(3) .team__avatar {
@@ -1375,12 +1390,15 @@ footer {
       object-position: 0rem -1.25rem; } }
   @media screen and (max-width: 480px) {
     .team__item:nth-child(3) .team__avatar {
-      object-position: 0rem -1.25rem; } }
+      object-position: -4rem -5.25rem; } }
 .team__item:nth-child(4) .team__avatar {
   object-position: 0rem -0.25rem; }
   @media screen and (max-width: 768px) {
     .team__item:nth-child(4) .team__avatar {
       object-position: 0rem 0rem; } }
+  @media screen and (max-width: 480px) {
+    .team__item:nth-child(4) .team__avatar {
+      object-position: -4rem -1rem; } }
 .team__member {
   width: 100%;
   display: flex;
@@ -1548,12 +1566,14 @@ footer {
     z-index: 3; }
     @media screen and (max-width: 768px) {
       .slider__arrow:first-child {
-        background: url(/icons/arrow-scroll.png) left center no-repeat, transparent; } }
+        background: url(/icons/arrow-scroll.png) 100% 45% no-repeat, #f8faf9;
+        width: 5.8375rem; } }
     @media screen and (max-width: 480px) {
       .slider__arrow:first-child {
-        background: url(/icons/arrow-scroll.png) left center no-repeat, transparent; } }
+        background: url(/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
+        width: 3.375rem; } }
   .slider__arrow:last-child {
-    transform: rotate(180deg);
+    transform: scale(-1, 1);
     position: absolute;
     top: 0;
     right: 0;
@@ -1564,10 +1584,12 @@ footer {
     z-index: 3; }
     @media screen and (max-width: 768px) {
       .slider__arrow:last-child {
-        background: url(/icons/arrow-scroll.png) left center no-repeat, transparent; } }
+        background: url(/icons/arrow-scroll.png) 100% 45% no-repeat, #f8faf9;
+        width: 5.8375rem; } }
     @media screen and (max-width: 480px) {
       .slider__arrow:last-child {
-        background: url(/icons/arrow-scroll.png) left center no-repeat, transparent; } }
+        background: url(/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
+        width: 3.375rem; } }
   .slider__box {
     width: 100%;
     padding-top: 4.1875rem;
@@ -1585,16 +1607,17 @@ footer {
     background-color: transparent; }
     @media screen and (max-width: 768px) {
       .slider__list {
-        max-width: 35.3125rem; } }
+        max-width: 36.3125rem; } }
     @media screen and (max-width: 480px) {
       .slider__list {
-        padding-left: 2.0625rem;
-        padding-right: 2.0625rem; } }
+        max-width: 26.3125rem; } }
   .slider__item {
     width: 100%;
     display: flex;
     align-items: center;
-    min-width: 52.8125rem; }
+    min-width: 52.8125rem;
+    will-change: right;
+    transition: right; }
     @media screen and (max-width: 768px) {
       .slider__item {
         flex-direction: column;
@@ -1603,12 +1626,6 @@ footer {
       .slider__item {
         flex-direction: column;
         min-width: 26.25rem; } }
-  @media screen and (max-width: 768px) {
-    .slider__item:last-child {
-      display: none; } }
-  @media screen and (max-width: 480px) {
-    .slider__item:last-child {
-      display: none; } }
   .slider__box-pic {
     margin-right: 5rem; }
     @media screen and (max-width: 768px) {
@@ -1664,7 +1681,7 @@ footer {
       .slider__title {
         text-align: center;
         font-size: 1.875rem;
-        width: 80%; } }
+        width: 78%; } }
     @media screen and (max-width: 480px) {
       .slider__title {
         text-align: center;
@@ -1728,7 +1745,7 @@ footer {
   @media screen and (max-width: 480px) {
     .menu-composition {
       top: -120%;
-      left: 18%; } }
+      left: 13%; } }
   .menu-composition__item {
     width: 100%;
     display: flex;
@@ -1809,8 +1826,7 @@ footer {
     color: #000000;
     font-weight: 400;
     padding-bottom: 20px;
-    text-align: center;
-    width: 70%; }
+    text-align: center; }
 
 .overlay-box {
   background-color: #000000d7;
