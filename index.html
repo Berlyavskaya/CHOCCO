@@ -346,7 +346,7 @@
                                 <span class="review__username">Вадим Грачев</span>
                             </div>                           
                         </li>
-                        <li class="review__item">
+                        <li class="review__item review__item--current">
                             <div class="review__box-avatar">
                                 <img src="/img/reviews-mari.jpg" alt="avatar" class="review__avatar">
                             </div>                            
@@ -358,17 +358,17 @@
                         </li>
                     </ul>
                     <ul class="review__carrousel">
-                        <li class="review__carrousel-item">
+                        <li class="review__carrousel-item" onclick="currentSlide(1)">
                             <a href="#" class="review__link">   
                               <img src="/img/reviews-olga-mini.jpg" alt="avatar" class="review__avatar--mini">  
                             </a>                            
                         </li>
-                        <li class="review__carrousel-item">
+                        <li class="review__carrousel-item" onclick="currentSlide(2)">
                             <a href="#" class="review__link">
                                 <img src="/img/reviews-vadim-mini.jpg" alt="" class="review__avatar--mini">
                             </a>                            
                         </li>
-                        <li class="review__carrousel-item review__carrousel-item--current">
+                        <li class="review__carrousel-item" onclick="currentSlide(3)">
                             <a href="#" class="review__link">
                                 <img src="/img/reviews-mari-mini.jpg" alt="" class="review__avatar--mini">
                             </a>                            
@@ -529,6 +529,7 @@
         
     </div>
     <script src="/slider.js"></script>
+    <script src="/slider-reviews.js"></script>
     <script src="/fs-menu.js"></script>
     <script src="/form.js"></script>
     <script src="/overlay.js"></script>

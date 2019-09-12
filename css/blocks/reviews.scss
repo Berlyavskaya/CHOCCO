@@ -139,9 +139,11 @@
         object-position: -18.875rem -4.875rem;
     }
 }
-.review__item:nth-child(1),
-.review__item:nth-child(2){
+.review__item{
     display: none;
+}
+.review__item--current {
+    display: flex;
 }
 .review__carrousel {
     display: flex; 
@@ -162,7 +164,8 @@
     border-radius: 50%;
     object-fit: none;
 }
-.review__carrousel-item--current {
+.review__carrousel-item--current,
+.review__carrousel-item:hover {
     border-radius: 50%;
     border: solid 6px $green;
     margin-right: rem(6px);
