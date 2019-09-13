@@ -3,7 +3,7 @@ const element = document.querySelector(".vertical-accord__list");
 let lastActive; 
 const item = document.querySelector ('.vertical-accord__item');
 
-element,addEventListener ('click', function(evt) {
+element.addEventListener ('click', function(evt) {
     evt.preventDefault();
     
     if (evt.target.classList.contains("vertical-accord__trigger")) {
