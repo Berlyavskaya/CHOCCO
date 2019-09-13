@@ -724,7 +724,7 @@ footer {
 .contacts:before {
   content: '';
   position: absolute;
-  background-image: url(/icons/phone.png);
+  background-image: url(/img/phone.png);
   top: 0.625rem;
   left: 0.5rem;
   width: 0.75rem;

@@ -7,7 +7,6 @@ const minRight = 0;
 const maxRight = list.offsetWidth;
 const step = list.offsetWidth;
 let currentRight = 0;
-console.log(maxRight);
 
 list.style.right = currentRight + 'px';
 
