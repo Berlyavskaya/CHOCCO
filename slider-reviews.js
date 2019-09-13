@@ -29,5 +29,5 @@ function showSlides(n) {
         dots[i].className = dots[i].className.replace("review__carrousel-item--current", "");
     }
     slides[slideIndex - 1].style.display = "flex";
-    dots[slideIndex - 1].className += "review__carrousel-item--current";
+    dots[slideIndex - 1].className += " review__carrousel-item--current";
 }

@@ -4,7 +4,7 @@ Error: Undefined mixin 'tablets'.
         from line 21 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss
 
 16:     background-repeat: no-repeat;
-17:     z-index: 2;
+17:     // z-index: 2;
 18: }
 19: .review__list {
 20:     margin-bottom: rem(20px);
@@ -66,4 +66,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablets'.\A         on line 21 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss, in `tablets'\A         from line 21 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss\A \A 16:     background-repeat: no-repeat;\A 17:     z-index: 2;\A 18: }\A 19: .review__list {\A 20:     margin-bottom: rem(20px);\A 21:     @include tablets {\A 22:         display: flex;\A 23:         justify-content: center;\A 24:     }\A 25:     \A 26: }"; }
+  content: "Error: Undefined mixin 'tablets'.\A         on line 21 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss, in `tablets'\A         from line 21 of C:\Users\Ksenia\Documents\GitHub\berlyavskaya.github.io\css\blocks\reviews.scss\A \A 16:     background-repeat: no-repeat;\A 17:     // z-index: 2;\A 18: }\A 19: .review__list {\A 20:     margin-bottom: rem(20px);\A 21:     @include tablets {\A 22:         display: flex;\A 23:         justify-content: center;\A 24:     }\A 25:     \A 26: }"; }

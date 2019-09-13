@@ -897,8 +897,7 @@ footer {
   top: 9%;
   left: 0;
   background: url(/img/berries-reviews-bg.png) 0% 100%;
-  background-repeat: no-repeat;
-  z-index: 2; }
+  background-repeat: no-repeat; }
 
 .review__list {
   margin-bottom: 1.25rem; }
