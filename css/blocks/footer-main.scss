@@ -4,11 +4,13 @@
     align-items: center;
     padding-top: rem(20px);
     padding-bottom: rem(20px);
+    max-height: rem(93px);
 
     @include phones {
         flex-direction: column;
         align-items: center;    
         text-align: center;
+        max-height: rem(168px);
     }   
 }
     

@@ -461,7 +461,6 @@ html {
 .wrapper {
   position: relative;
   width: 100%;
-  overflow: hidden;
   min-height: 100%; }
 
 .container {
@@ -892,12 +891,19 @@ footer {
 .reviews:after {
   position: absolute;
   content: '';
-  width: 100%;
-  height: 100%;
-  top: 9%;
-  left: 0;
+  width: 11rem;
+  height: 20rem;
+  top: 77%;
+  left: 35px;
   background: url(/img/berries-reviews-bg.png) 0% 100%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: 2; }
+  @media screen and (max-width: 480px) {
+    .reviews:after {
+      top: 77%;
+      left: 0px;
+      background: url(/img/berries-reviews-bg.png) -136% 46%;
+      background-repeat: no-repeat; } }
 
 .review__list {
   margin-bottom: 1.25rem; }
@@ -1472,19 +1478,31 @@ footer {
 .map {
   object-fit: cover;
   width: 100%;
-  height: 100%; }
+  height: 91vh; }
+  @media screen and (max-width: 480px) {
+    .map {
+      height: 80vh; } }
+
+.box-map {
+  width: 100%;
+  height: 91vh; }
+  @media screen and (max-width: 480px) {
+    .box-map {
+      height: 80vh; } }
 
 .footer-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 1.25rem;
-  padding-bottom: 1.25rem; }
+  padding-bottom: 1.25rem;
+  max-height: 5.8125rem; }
   @media screen and (max-width: 480px) {
     .footer-main {
       flex-direction: column;
       align-items: center;
-      text-align: center; } }
+      text-align: center;
+      max-height: 10.5rem; } }
 
 .address {
   font-size: 21px;
@@ -1837,5 +1855,87 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none; }
+
+body, html {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms; }
+
+body, .onepage-wrapper, html {
+  display: flex;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  padding: 0; }
+
+.onepage-wrapper .section {
+  width: 100%;
+  height: 100%; }
+
+.onepage-pagination {
+  position: fixed;
+  top: 13.1875rem;
+  right: 2.875rem;
+  z-index: 2; }
+  @media screen and (max-width: 480px) {
+    .onepage-pagination {
+      display: none; } }
+
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0.1875rem; }
+
+.onepage-pagination li a {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  border-radius: 50%; }
+
+.onepage-pagination li a:before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.onepage-pagination li a.active {
+  border: 1px solid #fff; }
+
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
+  overflow: auto; }
+
+.disabled-onepage-scroll .onepage-wrapper .section {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important; }
+
+.disabled-onepage-scroll .onepage-wrapper {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  transform: none !important;
+  -ms-transform: none !important;
+  min-height: 100%; }
+
+.disabled-onepage-scroll .onepage-pagination {
+  display: none; }
+
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+  position: inherit; }
 
 /*# sourceMappingURL=main.css.map */

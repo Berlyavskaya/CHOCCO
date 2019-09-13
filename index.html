@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CHOCCO</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&;apikey=<ABHte10BAAAAdoiQAQMASsVu9x8JoPP-ZSGK_2Wovs5AAVgAAAAAAAAAAABnGNlVMVHfeJ_i2ciGorYe3gkDCw==>" type="text/javascript"></script>
+    <script src="icon_customImage.js" type="text/javascript"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper main">
         <section class="section first-screen">
             <div class="container">
                 <header class="header">
@@ -428,13 +430,13 @@
                                 </label>                               
                             </div>
                             <div class="form__row form__row--radio">
-                                <input type="radio" class="form__radio" id="rb1" name="radio">
+                                <input type="radio" class="form__radio" id="rb1" name="radio" value="needChange">
                                 <label for="rb1" class="form__block-title--radio"> Потребуется сдача</label>
-                                <input type="radio" class="form__radio" id="rb2" name="radio">
+                                <input type="radio" class="form__radio" id="rb2" name="radio" value="cardPayment">
                                 <label for="rb2" class="form__block-title">Оплата по карте</label>
                             </div>
                             <div class="form__row form__row--checkbox">
-                                <input type="checkbox" class="form__checkbox" id="cb1" >
+                                <input type="checkbox" class="form__checkbox" id="cb1" value="doNotCallBack">
                                 <label for="cb1" class="form__block-title">Не перезванивать</label>   
                             </div>                                
                             <div class="form__row form__row--btn">  
@@ -448,10 +450,9 @@
             </div>
         </section>        
         <section class="section map">            
-                <div class="box-map">
-                    <img src="/img/map.jpg" alt="карта" class="map">
-                </div>            
-        </section>
+                <div class="box-map" id="map">
+                    <!-- <img src="/img/map.jpg" alt="карта" class="map"> -->
+                </div> 
         <footer class="footer-main">
             <div class="container container--footer-main">
                 <address class="address">
@@ -476,7 +477,9 @@
                     </ul>
                 </div>
             </div>
-        </footer>
+        </footer>               
+        </section>
+        
     </div>
     <div class="fs-menu">
          <a href="#" class="close close--fs-menu"></a>
@@ -498,7 +501,7 @@
         </ul>
     </div>
    
-    <ul class="fixed-menu">
+    <!-- <ul class="fixed-menu">
         <li class="fixed-menu__item fixed-menu__item--active">
             <button type="button" class="fixed-menu__dot"></button>
         </li>
@@ -519,6 +522,12 @@
             <button type="button" class="fixed-menu__dot"></button></li>
         <li class="fixed-menu__item">
             <button type="button" class="fixed-menu__dot"></button></li>
+    </ul> -->
+    <ul class="onepage-pagination">
+        <li><a data-index="1" href="#1" class="active"></a></li>
+        <li><a data-index="2" href="#2"></a></li>
+        <li><a data-index="3" href="#3"></a></li>
+        <li><a data-index="4" href="#4"></a></li>
     </ul>
     <div class="overlay-box">
         <div class="overlay">
@@ -528,6 +537,7 @@
         </div>
         
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/slider.js"></script>
     <script src="/slider-reviews.js"></script>
@@ -535,5 +545,14 @@
     <script src="/form.js"></script>
     <script src="/overlay.js"></script>
     <script src="/accord.js"></script>
+    <script src="/jquery.onepage-scroll.js"></script>
+    <script>
+        $(".main").onepage_scroll({
+        sectionContainer: ".section",
+        loop: true,
+        responsiveFallback: false,
+        animationTime: 500
+      });   
+    </script>
 </body>
 </html>

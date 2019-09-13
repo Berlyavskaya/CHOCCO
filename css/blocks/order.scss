@@ -161,6 +161,7 @@
     border-radius: 100%;
     background-color: $green;
 }
+
 // Скроем индикаторы выбора, когда элемент не выбран
 .form__checkbox:not(:checked) + label:after,
 .form__radio:not(:checked) + label:after {
