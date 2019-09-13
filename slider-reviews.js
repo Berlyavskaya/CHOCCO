@@ -1,11 +1,10 @@
 /* Индекс слайда по умолчанию */
 var slideIndex = 1;
 showSlides(slideIndex);
-
 /* Устанавливает текущий слайд */
 function currentSlide(n) {
-    showSlides(slideIndex = n);
-    slides.className.add ("review__item--current");
+    var slides = document.getElementsByClassName("review__item");
+    showSlides(slideIndex = n);    
 }
 
 /* Основная функция слайдера */
@@ -13,8 +12,6 @@ function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("review__item");
     var dots = document.getElementsByClassName("review__carrousel-item");
-    console.log (slides.length);
-    console.log (dots.length);
 
     if (n > slides.length) {
       slideIndex = 1
