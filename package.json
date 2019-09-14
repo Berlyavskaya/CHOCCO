@@ -1,0 +1,24 @@
+{
+  "name": "berlyavskaya.github.io",
+  "version": "1.0.0",
+  "description": "Натуральные шоколадные батончики",
+  "main": "accord.js",
+  "scripts": {
+    "gulp": "gulptoch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Berlyavskaya/berlyavskaya.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Berlyavskaya/berlyavskaya.github.io/issues"
+  },
+  "homepage": "https://github.com/Berlyavskaya/berlyavskaya.github.io#readme",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

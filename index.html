@@ -16,13 +16,13 @@
                     <img src="/img/logo.png" alt="Логотип" class="logo">
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item"><a href="#" class="nav__link"> О нас</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Батончики</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                            <li class="nav__item"><a href="#reasons" class="nav__link"> О нас</a></li>
+                            <li class="nav__item"><a href="#product" class="nav__link">Батончики</a></li>
+                            <li class="nav__item"><a href="#team" class="nav__link">Команда</a></li>
+                            <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
+                            <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                            <li class="nav__item"><a href="#working" class="nav__link">Как мы работаем</a></li>
+                            <li class="nav__item"><a href="#address" class="nav__link">Контакты</a></li>
                         </ul>
                     </nav>
                     <address class="contacts">
@@ -37,7 +37,7 @@
                         <div class="desc">
                             <h1 class="desc_title">натуральные шоколадные батончики</h1>
                             <p class="desc__text">Наши батончики идеально подходят для тех, кто следит за своим здоровьем</p>
-                            <button class="btn" type="button">заказать</button>
+                            <a href="#order" class="anchor"><button class="btn" type="button">заказать</button></a>
                         </div>
                     </div> 
                 </div>
@@ -59,7 +59,7 @@
                     </footer>    
             </div>
         </section>
-        <section class="section reasons">
+        <section class="section reasons" id="reasons">
             <div class="container">
                 <h2 class="section-title">почему chocco?</h2>
                 <p class="reasons__subtitle">В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые удобно взять с собой.</p> 
@@ -95,7 +95,7 @@
                 </ul>
             </div>            
         </section>
-        <section class="section section--slider">
+        <section class="section section--slider" id="product">
             <div class="container slider">                
                 <div class="slider__box">
                         <a href="#" class="slider__arrow" id="left"></a>
@@ -228,7 +228,7 @@
                 
             </div>
         </section>
-        <section class="section team">
+        <section class="section team" id="team">
             <div class="container">
                 <h2 class="section-title section-title--team">команда</h2>
                 <ul class="team__list">
@@ -283,7 +283,7 @@
                 </ul>
             </div>            
         </section>
-        <section class="section menu-accord">
+        <section class="section menu-accord" id="menu">
                 <h2 class="section-title section-title--white">меню</h2>
                 <div class="vertical-accord">                    
                     <ul class="vertical-accord__list">                         
@@ -323,7 +323,7 @@
                     </ul>
                 </div>
             </section>
-        <section class="section reviews">
+        <section class="section reviews" id="reviews">
             <div class="container">
                 <h2 class="section-title section-title--reviews">отзывы</h2>
                 <div class="review">
@@ -380,8 +380,27 @@
             </div>
             
         </section>
-        
-        <section class="section order">
+        <section class="section working" id="working">
+            <div class="container">
+                <h2 class="section-title section-title--team">как мы работаем</h2>
+                <div class="player">
+                    <div class="player__wrapper">
+                      <div id="yt-player"></div>
+                      <div class="player__splash"></div>
+                    </div>
+                    <div class="player__controls">
+                      <button class="player__start "></button>
+                      <div class="player__playback">
+                        <button class="player__playback-button"></button>
+                      </div>
+                      <div class="player__duration">
+                        <span class="player__duration-completed">0:00</span> :
+                        <span class="player__duration-estimate">0:00</span>
+                      </div>
+                    </div>
+            </div>
+        </section>
+        <section class="section order" id="order">
             <div class="container">
                 <h2 class="section-title section-title--order">закажите доставку</h2>
                 <div class="form">
@@ -453,7 +472,7 @@
                 <div class="box-map" id="map">
                     <!-- <img src="/img/map.jpg" alt="карта" class="map"> -->
                 </div> 
-        <footer class="footer-main">
+        <footer class="footer-main" id="address">
             <div class="container container--footer-main">
                 <address class="address">
                     <p class="address__address">Москва, ул.Новый Арбат, д.31/12</p>
@@ -546,6 +565,9 @@
     <script src="/overlay.js"></script>
     <script src="/accord.js"></script>
     <script src="/jquery.onepage-scroll.js"></script>
+    <script src="/main-menu.js"></script>
+    <script src="/player.js"></script>
+
     <script>
         $(".main").onepage_scroll({
         sectionContainer: ".section",
