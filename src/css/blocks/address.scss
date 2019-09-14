@@ -20,10 +20,10 @@
     &__tel::before {
         content: '';
         position: absolute;
-        background-image: url(/img/phone.png) ;
+        background-image: url(/src/img/phone.png) ;
         top: rem(5px);
         left: 0;
-        width: rem(12px);
+        width: rem(13px);
         height: rem(11px);
     }
 }

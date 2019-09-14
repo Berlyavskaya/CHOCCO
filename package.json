@@ -2,9 +2,9 @@
   "name": "berlyavskaya.github.io",
   "version": "1.0.0",
   "description": "Натуральные шоколадные батончики",
-  "main": "accord.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "gulp": "gulptoch"
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,15 @@
   },
   "homepage": "https://github.com/Berlyavskaya/berlyavskaya.github.io#readme",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "gulp-rm": "^2.0.0"
+  },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "node-sass": "^4.12.0"
   }
 }

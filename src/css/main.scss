@@ -1,0 +1,22 @@
+// colores
+$blue-bg: #61c4d9;
+$grey-bg: #f8faf9;
+$green-bg: #cfdeda;
+$green: #0f5a47;
+$green-btn: #0b4d3c;
+
+@import "./media.scss";
+
+// nomalize
+@import "./normalize.scss";
+@import "./fonts.scss";
+@import "./layout.scss";
+
+
+
+@import "./blocks/*.scss";
+
+
+
+
+

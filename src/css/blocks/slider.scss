@@ -18,14 +18,14 @@
         translate: 50% 50%;
         height: 100%;
         width: rem(55px);
-        background: url(/icons/arrow-scroll.png) center center no-repeat, #f8faf9;
+        background: url(/src/icons/arrow-scroll.png) center center no-repeat, #f8faf9;
         z-index: 3;
         @include tablets {
-            background: url(/icons/arrow-scroll.png) 100%  45% no-repeat, #f8faf9;
+            background: url(/src/icons/arrow-scroll.png) 100%  45% no-repeat, #f8faf9;
             width: 5.8375rem;
         }
         @include phones {
-            background: url(/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
+            background: url(/src/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
             width: 3.375rem;
         }
         
@@ -38,14 +38,14 @@
         translate: 50% 50%;
         height: 100%;
         width: rem(55px);
-        background: url(/icons/arrow-scroll.png) center center no-repeat,#f8faf9;
+        background: url(/src/icons/arrow-scroll.png) center center no-repeat,#f8faf9;
         z-index: 3;
         @include tablets {
-            background: url(/icons/arrow-scroll.png) 100%  45% no-repeat, #f8faf9;
+            background: url(/src/icons/arrow-scroll.png) 100%  45% no-repeat, #f8faf9;
             width: 5.8375rem;
         }
         @include phones {
-            background: url(/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
+            background: url(/src/icons/arrow-scroll.png) left center no-repeat, #f8faf9;
             width: 3.375rem;
         }
     }
