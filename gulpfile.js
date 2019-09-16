@@ -23,7 +23,10 @@ task('copy:html', () => {
     return src("src/*.html").pipe(dest("dist"));
 });
 task('copy:icons', () => {  
-    return src("src/icons").pipe(dest("dist"));
+    return src(["src/icons/**/*.svg", "src/icons/**/*.png"]).pipe(dest("dist/icons"));
+});
+task('copy:img', () => {  
+    return src(["src/img/**/*.jpg", "src/img/**/*.png"]).pipe(dest("dist/img"));
 });
 
 task ("styles", () => {
@@ -57,4 +60,4 @@ task('server', () => {
 });
 watch('src/css/**/*.scss', series('styles'));
 watch('src/*.html', series('copy:html'));
-task("default", series("clean", "copy:html","copy:icons","styles","js","server"));
+task("default", series("clean", "copy:html","copy:icons","copy:img","styles","js","server"));
