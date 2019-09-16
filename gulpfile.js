@@ -8,6 +8,8 @@ const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
 sass.compiler = require('node-sass');
 
@@ -38,7 +40,7 @@ task ("styles", () => {
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({        
-        cascade: true
+        cascade: false
     }))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write())    
@@ -49,6 +51,10 @@ task('js', () => {
     return src("src/js/*.js")
     .pipe(sourcemaps.init())
     .pipe(concat("main.js", {newLine: ";"}))
+    // .pipe(babel({
+    //     presets: ['@babel/env']
+    //   }))
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(dest('dist'));
 })

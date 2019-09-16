@@ -1,20 +1,4 @@
-/* ===========================================================
- * jquery-onepage-scroll.js v1.3.1
- * ===========================================================
- * Copyright 2013 Pete Rojwongsuriya.
- * http://www.thepetedesign.com
- *
- * Create an Apple-like website that let user scroll
- * one page at a time
- *
- * Credit: Eike Send for the awesome swipe event
- * https://github.com/peachananr/onepage-scroll
- *
- * License: GPL v3
- *
- * ========================================================== */
-
-!function($){
+;!function($){
 
   var defaults = {
     sectionContainer: "section",
