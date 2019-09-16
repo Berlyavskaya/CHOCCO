@@ -1,4 +1,4 @@
-$(document).ready(function(){
+;$(document).ready(function(){
         $(".nav").on("click","a", function (event) {
             //отменяем стандартную обработку нажатия по ссылке
             event.preventDefault();

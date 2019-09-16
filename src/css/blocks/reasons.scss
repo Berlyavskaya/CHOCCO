@@ -121,7 +121,7 @@
     height: rem(21px);
     top: 18%;
     left: -22%;
-    background: url(/dist/icons/dots-reasons.svg);
+    background: url(/icons/dots-reasons.svg);
     background-repeat: no-repeat;
     
     @include tablets {
@@ -135,7 +135,7 @@
     height: rem(21px);
     top: 18%;
     left: 97%;
-    background: url(/dist/icons/dots-reasons.svg);
+    background: url(/icons/dots-reasons.svg);
     background-repeat: no-repeat;
     @include tablets {
         display: none;

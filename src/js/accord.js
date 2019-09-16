@@ -1,19 +1,19 @@
-const element = document.querySelector(".vertical-accord__list");
+;const elem = document.querySelector(".vertical-accord__list");
 // const trigger = document.querySelector(".vertical-accord__trigger");
-let lastActive; 
-const item = document.querySelector ('.vertical-accord__item');
+let lastActive2; 
+const item2 = document.querySelector ('.vertical-accord__item');
 
-element.addEventListener ('click', function(evt) {
+elem.addEventListener ('click', function(evt) {
     evt.preventDefault();
     
     if (evt.target.classList.contains("vertical-accord__trigger")) {
-        if (lastActive) {
-            lastActive.classList.remove("vertical-accord__item--active");
+        if (lastActive2) {
+            lastActive2.classList.remove("vertical-accord__item--active");
         }
-        lastActive = evt.target.parentNode;
-        lastActive.classList.add("vertical-accord__item--active");
+        lastActive2 = evt.target.parentNode;
+        lastActive2.classList.add("vertical-accord__item--active");
     }
     if (evt.target.classList.contains("close")) {
-        lastActive.classList.remove("vertical-accord__item--active");
+        lastActive2.classList.remove("vertical-accord__item--active");
     }
 })

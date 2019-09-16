@@ -23,10 +23,13 @@ task('copy:html', () => {
     return src("src/*.html").pipe(dest("dist"));
 });
 task('copy:icons', () => {  
-    return src(["src/icons/**/*.svg", "src/icons/**/*.png"]).pipe(dest("dist/icons"));
+    return src(["src/icons/**/*.svg", "src/icons/**/*.png","src/icons/**/*.gif"]).pipe(dest("dist/icons"));
 });
 task('copy:img', () => {  
     return src(["src/img/**/*.jpg", "src/img/**/*.png"]).pipe(dest("dist/img"));
+});
+task('copy:fonts', () => {  
+    return src(["src/fonts/*.woff", "src/fonts/*.woff2"]).pipe(dest("dist/fonts"));
 });
 
 task ("styles", () => {
@@ -34,8 +37,7 @@ task ("styles", () => {
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-        browsers: ["last 2 versions"],
+    .pipe(autoprefixer({        
         cascade: true
     }))
     .pipe(cleanCSS())
@@ -58,6 +60,7 @@ task('server', () => {
         open: false
     });
 });
+watch('src/js/*.js', series('js'));
 watch('src/css/**/*.scss', series('styles'));
 watch('src/*.html', series('copy:html'));
-task("default", series("clean", "copy:html","copy:icons","copy:img","styles","js","server"));
+task("default", series("clean","copy:icons","copy:img","copy:fonts","styles","js","copy:html","server"));

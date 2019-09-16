@@ -1,35 +1,35 @@
-const left = document.getElementById("left");
-const right = document.getElementById("right");
-const list = document.getElementById("list");
-const computed = getComputedStyle(list);
+;const left2 = document.getElementById("left");
+const right2 = document.getElementById("right");
+const list2 = document.getElementById("list");
+const computed2 = getComputedStyle(list2);
 
-const minRight = 0;
-const maxRight = list.offsetWidth;
-const step = list.offsetWidth;
-let currentRight = 0;
+const minRight2 = 0;
+const maxRight2 = list.offsetWidth;
+const step2 = list.offsetWidth;
+let currentRight2 = 0;
 
-list.style.right = currentRight + 'px';
+list2.style.right = currentRight2 + 'px';
 
-right.addEventListener("click",function(evt) {
+right2.addEventListener("click",function(evt) {
     evt.preventDefault();    
-    if (currentRight < maxRight) {
-        currentRight += step;
-        list.style.right = currentRight + 'px';
+    if (currentRight2 < maxRight2) {
+        currentRight2 += step2;
+        list2.style.right = currentRight2 + 'px';
     } else {
-        currentRight = minRight;
-        list.style.right = currentRight + 'px';
+        currentRight2 = minRight2;
+        list2.style.right = currentRight2 + 'px';
     }
 });
 
-left.addEventListener("click",function(evt) {
+left2.addEventListener("click",function(evt) {
     evt.preventDefault();
 
-    if (currentRight>minRight) {
-        currentRight -= step;
-        list.style.right = currentRight + 'px';
+    if (currentRight2>minRight2) {
+        currentRight2 -= step2;
+        list2.style.right = currentRight2 + 'px';
     } else {
-        currentRight = maxRight;
-        list.style.right = currentRight + 'px';
+        currentRight2 = maxRight2;
+        list2.style.right = currentRight2 + 'px';
     }
 });
 

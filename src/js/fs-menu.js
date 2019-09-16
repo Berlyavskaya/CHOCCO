@@ -1,4 +1,4 @@
-var fsMenu = document.querySelector('.fs-menu');
+;var fsMenu = document.querySelector('.fs-menu');
 var hamburger = document.querySelector('.hamburger-menu-link');
 var close = document.querySelector('.close--fs-menu');
 

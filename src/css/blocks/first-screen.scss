@@ -2,18 +2,18 @@
     position: relative;
     z-index: 1;
     font-family: 'Alegreya Sans';
-    background: url(/dist/img/product_bg.png) 85% 50%/48%, 
-                url(/dist/img/1scr_bg.png) bottom right / contain, $blue-bg;
+    background: url(/img/product_bg.png) 85% 50%/48%, 
+                url(/img/1scr_bg.png) bottom right / contain, $blue-bg;
     background-repeat: no-repeat;
     color: white;
     padding-top: rem(24px);
     padding-bottom: rem(47px);
     @include tablets {
-        background: url(/dist/img/product_bg.png) 51% 13%/48%, url(/dist/img/1scr_bg.png) 92% 9%/53%, #61c4d9; 
+        background: url(/img/product_bg.png) 51% 13%/48%, url(/img/1scr_bg.png) 92% 9%/53%, #61c4d9; 
         background-repeat: no-repeat;           
     }
     @include phones {
-        background: url(/dist/img/product_bg.png) 51% 10%/60%, url(/dist/img/1scr_bg.png) 92% 0%/59%, #61c4d9; 
+        background: url(/img/product_bg.png) 51% 10%/60%, url(/img/1scr_bg.png) 92% 0%/59%, #61c4d9; 
         background-repeat: no-repeat;           
     }
     &__content {
@@ -40,14 +40,14 @@
     width: 100%;
     height: 100%;
     top: rem(50px);
-    background: url(/dist/img/berries-1scr-bg.png) 41% 100%/76%;
+    background: url(/img/berries-1scr-bg.png) 41% 100%/76%;
     background-repeat: no-repeat;
     @include tablets {
-        background: url(/dist/img/berries-1scr-bg.png) -60% 20%/84%;
+        background: url(/img/berries-1scr-bg.png) -60% 20%/84%;
         background-repeat: no-repeat;          
     }
     @include phones {
-        background: url(/dist/img/berries-1scr-bg.png) 169% 19%/120%;
+        background: url(/img/berries-1scr-bg.png) 169% 19%/120%;
         background-repeat: no-repeat;          
     }
 }
