@@ -3,8 +3,11 @@ const rm = require ('gulp-rm');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
+const concat = require('gulp-concat');
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cleanCSS = require('gulp-clean-css');
 
 sass.compiler = require('node-sass');
 
@@ -25,22 +28,33 @@ task('copy:icons', () => {
 
 task ("styles", () => {
     return src ("src/css/main.scss")
+    .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ["last 2 versions"],
         cascade: true
     }))
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write())    
     .pipe(dest('dist'));
 });
+
+task('js', () => {
+    return src("src/js/*.js")
+    .pipe(sourcemaps.init())
+    .pipe(concat("main.js", {newLine: ";"}))
+    .pipe(sourcemaps.write())
+    .pipe(dest('dist'));
+})
 task('server', () => {
     browserSync.init({
         server: {
-            baseDir: "./src"
+            baseDir: "./dist"
         },
         open: false
     });
 });
 watch('src/css/**/*.scss', series('styles'));
 watch('src/*.html', series('copy:html'));
-task("default", series("clean", "copy:html","copy:icons","styles","server"));
+task("default", series("clean", "copy:html","copy:icons","styles","js","server"));
