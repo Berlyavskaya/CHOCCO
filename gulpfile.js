@@ -1,4 +1,4 @@
-const {src, dest, task, series, watch} = require('gulp');
+const {src, dest, task, series, watch, parallel} = require('gulp');
 const rm = require ('gulp-rm');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
@@ -8,13 +8,17 @@ const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
+// const babel = require('gulp-babel');
+// const uglify = require('gulp-uglify');
+const gulpif = require('gulp-if');
+const env = process.env.NODE_ENV;
 
 sass.compiler = require('node-sass');
 
 task('clean', () => {
-    return src( "dist/**/*", { read: false }).pipe(rm())
+    console.log(env);
+    return src( "dist/**/*", { read: false })
+    .pipe(rm())
   });
 task('copy:scss', () => {  
     return src("src/css/main.scss")
@@ -36,26 +40,26 @@ task('copy:fonts', () => {
 
 task ("styles", () => {
     return src ("src/css/main.scss")
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(env === 'dev', sourcemaps.init()))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({        
+    .pipe(gulpif(env === 'prod', autoprefixer({        
         cascade: false
-    }))
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write())    
+    })))
+    .pipe(gulpif(env === 'prod', cleanCSS()))
+    .pipe(gulpif(env === 'dev', sourcemaps.write()))    
     .pipe(dest('dist'));
 });
 
 task('js', () => {
     return src("src/js/*.js")
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(env === 'dev',sourcemaps.init()))
     .pipe(concat("main.js", {newLine: ";"}))
     // .pipe(babel({
     //     presets: ['@babel/env']
     //   }))
     // .pipe(uglify())
-    .pipe(sourcemaps.write())
+    .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest('dist'));
 })
 task('server', () => {
@@ -66,7 +70,17 @@ task('server', () => {
         open: false
     });
 });
-watch('src/js/*.js', series('js'));
-watch('src/css/**/*.scss', series('styles'));
-watch('src/*.html', series('copy:html'));
-task("default", series("clean","copy:icons","copy:img","copy:fonts","styles","js","copy:html","server"));
+task("watch", ()=> {
+    watch('src/js/*.js', series('js'));
+    watch('src/css/**/*.scss', series('styles'));
+    watch('src/*.html', series('copy:html'));
+});
+task("build",
+ series(
+   'clean',
+   parallel('copy:html', 'styles', 'js', "copy:icons","copy:img"))
+);
+task("default", 
+series("clean",
+parallel("copy:icons","copy:img","copy:fonts","styles","js","copy:html"),
+parallel ("watch","server")));
