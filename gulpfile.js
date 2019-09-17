@@ -8,8 +8,8 @@ const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
-// const babel = require('gulp-babel');
-// const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 const gulpif = require('gulp-if');
 const env = process.env.NODE_ENV;
 
@@ -55,10 +55,10 @@ task('js', () => {
     return src("src/js/*.js")
     .pipe(gulpif(env === 'dev',sourcemaps.init()))
     .pipe(concat("main.js", {newLine: ";"}))
-    // .pipe(babel({
-    //     presets: ['@babel/env']
-    //   }))
-    // .pipe(uglify())
+    .pipe(gulpif(env === 'prod', babel({
+        presets: ['@babel/env']
+      })))
+    .pipe(gulpif(env === 'prod',uglify()))
     .pipe(gulpif(env === 'dev', sourcemaps.write()))
     .pipe(dest('dist'));
 })
